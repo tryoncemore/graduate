@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.9.28)  1 NOV 2017 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.9.28)  1 NOV 2017 18:04
 entering extended mode
 **./main.tex
 (main.tex
@@ -446,12 +446,8 @@ LaTeX Warning: Unused global option(s):
     [openany].
 
 (main.aux (abstract_CN.aux) (abstract_EN.aux) (pre.aux) (chapter/chap1.aux)
-(chapter/chap2.aux
-
-LaTeX Warning: Label `1' multiply defined.
-
-) (chapter/chap3.aux) (chapter/chap4.aux) (chapter/chap5.aux) (bib.aux)
-(appendix.aux) (resume.aux) (acknowledge.aux))
+(chapter/chap2.aux) (chapter/chap3.aux) (chapter/chap4.aux) (chapter/chap5.aux)
+(bib.aux) (appendix.aux) (resume.aux) (acknowledge.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -759,52 +755,62 @@ Overfull \hbox (3.0pt too wide) detected at line 29
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 31
-\OT1/ptm/m/n/12 3.1 
+Overfull \hbox (3.0pt too wide) detected at line 30
+\OT1/ptm/m/n/12 2.5 
  []
 
 
 Overfull \hbox (3.0pt too wide) detected at line 32
-\OT1/ptm/m/n/12 3.2 
+\OT1/ptm/m/n/12 3.1 
  []
 
 
 Overfull \hbox (3.0pt too wide) detected at line 33
-\OT1/ptm/m/n/12 3.3 
+\OT1/ptm/m/n/12 3.2 
  []
 
 
 Overfull \hbox (3.0pt too wide) detected at line 34
+\OT1/ptm/m/n/12 3.3 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 35
 \OT1/ptm/m/n/12 3.4 
  []
 
 
 Overfull \hbox (3.0pt too wide) detected at line 36
-\OT1/ptm/m/n/12 4.1 
- []
-
-
-Overfull \hbox (3.0pt too wide) detected at line 37
-\OT1/ptm/m/n/12 4.2 
+\OT1/ptm/m/n/12 3.5 
  []
 
 
 Overfull \hbox (3.0pt too wide) detected at line 38
-\OT1/ptm/m/n/12 4.3 
+\OT1/ptm/m/n/12 4.1 
  []
 
 
 Overfull \hbox (3.0pt too wide) detected at line 39
-\OT1/ptm/m/n/12 4.4 
+\OT1/ptm/m/n/12 4.2 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 40
+\OT1/ptm/m/n/12 4.3 
  []
 
 
 Overfull \hbox (3.0pt too wide) detected at line 41
+\OT1/ptm/m/n/12 4.4 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 43
 \OT1/ptm/m/n/12 5.1 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 42
+Overfull \hbox (3.0pt too wide) detected at line 44
 \OT1/ptm/m/n/12 5.2 
  []
 
@@ -1114,17 +1120,14 @@ chapter/chap2.aux) (chapter/chap3.aux) (chapter/chap4.aux)
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 3.12pt have occurred.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 8246 strings out of 493324
- 126138 string characters out of 3139068
- 177258 words of memory out of 3000000
- 11446 multiletter control sequences out of 15000+200000
- 85193 words of font info for 308 fonts, out of 3000000 for 9000
+ 8247 strings out of 493324
+ 126185 string characters out of 3139068
+ 176207 words of memory out of 3000000
+ 11447 multiletter control sequences out of 15000+200000
+ 84383 words of font info for 305 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,14n,48p,1497b,839s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,14n,48p,1497b,835s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.dvi (30 pages, 149028 bytes).
+Output written on main.dvi (30 pages, 152124 bytes).
