@@ -1,0 +1,15 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  本文件定义了格式方面的一些变量
+%%  用户不可修改本文件。如果确需修改，请在 thesis/*/changeformat.tex
+%%  中 (其中的星号为 GB2312 或 UTF-8) 以适当的方式进行修改。
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{2em} %设置段首缩进量
+%\renewcommand{\baselinestretch}{1.122}\normalsize %重设行距
+%\renewcommand{\baselinestretch}{1.0}\normalsize
+\makeatletter
+\def\breaklong#1{\@tfor\onechar:=#1\do{{\onechar\allowbreak}}} %英文自动断行
+\makeatother
+

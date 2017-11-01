@@ -1,0 +1,13 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2010.7.6)  17 JUL 2013 17:56
+entering extended mode
+**chap2.tex
+
+("C:\Documents and Settings\Administrator\My Documents\计算机应用研究所论文模板
+\chapter\chap2.tex"
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
+! Undefined control sequence.
+l.2 \rhead
+          {\xiaowuhao\sectionindex\quad网格顶点的微分坐标表示}
+? 

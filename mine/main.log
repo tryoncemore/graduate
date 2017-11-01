@@ -1,0 +1,1130 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.9.28)  31 OCT 2017 22:42
+entering extended mode
+**./main.tex
+(main.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.st
+y
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.s
+ty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+ ("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\captionmargin=\dimen103
+\captionmargin@=\dimen104
+\captionwidth=\dimen105
+\caption@tempdima=\dimen106
+\caption@indent=\dimen107
+\caption@parindent=\dimen108
+\caption@hangindent=\dimen109
+)
+\c@ContinuedFloat=\count87
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\picinpar\picinpar.
+sty
+Pictures in Paragraphs. Version 1.2a, July 13, 1993
+\br=\count88
+\bl=\count89
+\na=\count90
+\nb=\count91
+\tcdsav=\count92
+\tcl=\count93
+\tcd=\count94
+\tcn=\count95
+\cumtcl=\count96
+\cumpartcl=\count97
+\lftside=\dimen110
+\rtside=\dimen111
+\hpic=\dimen112
+\vpic=\dimen113
+\strutilg=\dimen114
+\picwd=\dimen115
+\topheight=\dimen116
+\ilg=\dimen117
+\lpic=\dimen118
+\lwindowsep=\dimen119
+\rwindowsep=\dimen120
+\cumpar=\dimen121
+\twa=\toks15
+\la=\toks16
+\ra=\toks17
+\ha=\toks18
+\pictoc=\toks19
+\rawtext=\box26
+\holder=\box27
+\windowbox=\box28
+\wartext=\box29
+\finaltext=\box30
+\aslice=\box31
+\bslice=\box32
+\wbox=\box33
+\wstrutbox=\box34
+\picbox=\box35
+\waslice=\box36
+\wbslice=\box37
+\fslice=\box38
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\paralist\paralist.
+sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip43
+\plpartopsep=\skip44
+\plitemsep=\skip45
+\plparsep=\skip46
+\pl@lab=\toks20
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\footmisc\footmisc.
+sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks21
+\footnotemargin=\dimen122
+\c@pp@next@reset=\count98
+\c@@fnserial=\count99
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+) (packages.tex ("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ ("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks22
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen123
+))
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen124
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count100
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count101
+\leftroot@=\count102
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count103
+\DOTSCASE@=\count104
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box39
+\strutbox@=\box40
+\big@size=\dimen125
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count105
+\c@MaxMatrixCols=\count106
+\dotsspace@=\muskip10
+\c@parentequation=\count107
+\dspbrk@lvl=\count108
+\tag@help=\toks24
+\row@=\count109
+\column@=\count110
+\maxfields@=\count111
+\andhelp@=\toks25
+\eqnshift@=\dimen126
+\alignsep@=\dimen127
+\tagshift@=\dimen128
+\tagwidth@=\dimen129
+\totwidth@=\dimen130
+\lineht@=\dimen131
+\@envbody=\toks26
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvips.def on input line 147.
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\dvips.def"
+File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 99.
+)
+\Gin@req@height=\dimen132
+\Gin@req@width=\dimen133
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip50
+\subfigcapskip=\skip51
+\subfigcaptopadj=\dimen134
+\subfigbottomskip=\skip52
+\subfigcapmargin=\dimen135
+\subfiglabelskip=\skip53
+\c@subfigure=\count112
+\c@lofdepth=\count113
+\c@subtable=\count114
+\c@lotdepth=\count115
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("D:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip54
+\subfig@bottom=\skip55
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjk\CJK.sty
+Package: CJK 2015/04/18 4.8.4
+
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjk\mule\MULEenc.s
+ty
+Package: MULEenc 2015/04/18 4.8.4
+) (C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjk\CJK.enc
+File: CJK.enc 2015/04/18 4.8.4
+)
+LaTeX Info: Redefining \selectfont on input line 755.
+\CJK@indent=\box41
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjk\CJKulem.sty
+Package: CJKulem 2015/04/18 4.8.4
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\ulem\ulem.sty"
+\UL@box=\box42
+\UL@hyphenbox=\box43
+\UL@skip=\skip56
+\UL@hook=\toks28
+\UL@height=\dimen136
+\UL@pe=\count116
+\UL@pixel=\dimen137
+\ULC@box=\box44
+Package: ulem 2012/05/18
+\ULdepth=\dimen138
+)
+\UL@lastkern=\dimen139
+\CJK@skip=\skip57
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjkpunct\CJKpunct.
+sty
+Package: CJKpunct 2016/05/14 4.8.4
+\CJKpunct@cnta=\count117
+\CJKpunct@cntb=\count118
+\CJKpunct@cntc=\count119
+\CJKpunct@cntd=\count120
+\CJKpunct@cnte=\count121
+
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjkpunct\CJKpunct.
+spa)) ("D:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("D:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count122
+\Gm@cntv=\count123
+\c@Gm@tempcnt=\count124
+\Gm@bindingoffset=\dimen140
+\Gm@wd@mp=\dimen141
+\Gm@odd@mp=\dimen142
+\Gm@even@mp=\dimen143
+\Gm@layoutwidth=\dimen144
+\Gm@layoutheight=\dimen145
+\Gm@layouthoffset=\dimen146
+\Gm@layoutvoffset=\dimen147
+\Gm@dimlist=\toks29
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\titlesec\titlesec.
+sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box45
+\beforetitleunit=\skip58
+\aftertitleunit=\skip59
+\ttl@plus=\dimen148
+\ttl@minus=\dimen149
+\ttl@toksa=\toks30
+\titlewidth=\dimen150
+\titlewidthlast=\dimen151
+\titlewidthfirst=\dimen152
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\titlesec\titletoc.
+sty
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen153
+) ("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\xifthen\xifthen.sty"
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count125
+\calc@Bcount=\count126
+\calc@Adimen=\dimen154
+\calc@Bdimen=\dimen155
+\calc@Askip=\skip60
+\calc@Bskip=\skip61
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count127
+\calc@Cskip=\skip62
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\ifmtarg\ifmtarg.st
+y
+Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
+)) ("D:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks31
+\verbatim@line=\toks32
+\verbatim@in@stream=\read1
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip63
+\f@nch@O@elh=\skip64
+\f@nch@O@erh=\skip65
+\f@nch@O@olh=\skip66
+\f@nch@O@orh=\skip67
+\f@nch@O@elf=\skip68
+\f@nch@O@erf=\skip69
+\f@nch@O@olf=\skip70
+\f@nch@O@orf=\skip71
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.
+sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen156
+\lightrulewidth=\dimen157
+\cmidrulewidth=\dimen158
+\belowrulesep=\dimen159
+\belowbottomsep=\dimen160
+\aboverulesep=\dimen161
+\abovetopsep=\dimen162
+\cmidrulesep=\dimen163
+\cmidrulekern=\dimen164
+\defaultaddspace=\dimen165
+\@cmidla=\count128
+\@cmidlb=\count129
+\@aboverulesep=\dimen166
+\@belowrulesep=\dimen167
+\@thisruleclass=\count130
+\@lastruleclass=\count131
+\@thisrulewidth=\dimen168
+) ("D:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip72
+\multirow@cntb=\count132
+\multirow@dima=\skip73
+\bigstrutjot=\dimen169
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty"
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count133
+\rotFPtop=\skip74
+\rotFPbot=\skip75
+\rot@float@box=\box46
+\rot@mess@toks=\toks33
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen170
+\extrarowheight=\dimen171
+\NC@list=\toks34
+\extratabsurround=\skip76
+\backup@length=\skip77
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithms\algorit
+hmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count134
+\c@ALC@line=\count135
+\c@ALC@rem=\count136
+\c@ALC@depth=\count137
+\ALC@tlm=\skip78
+\algorithmicindent=\skip79
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithms\algorit
+hm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+ ("D:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count138
+\float@exts=\toks35
+\float@box=\box47
+\@float@everytoks=\toks36
+\@floatcapt=\box48
+)
+\@float@every@algorithm=\toks37
+\c@algorithm=\count139
+))
+("D:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (sys/han_zi.tex)
+(sys/format.tex)
+
+LaTeX Warning: Unused global option(s):
+    [openany].
+
+(main.aux (abstract_CN.aux) (abstract_EN.aux) (pre.aux) (chapter/chap1.aux)
+(chapter/chap2.aux
+
+LaTeX Warning: Label `1' multiply defined.
+
+) (chapter/chap3.aux) (chapter/chap4.aux) (chapter/chap5.aux) (bib.aux)
+(appendix.aux) (resume.aux) (acknowledge.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 31.
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: picinpar package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: subfigure package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* detected driver: dvips
+*geometry* verbose mode - [ preamble ] result:
+* driver: dvips
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(90.19518pt, 417.11752pt, 90.19518pt)
+* v-part:(T,H,B)=(72.2698pt, 700.50723pt, 72.2698pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=417.11752pt
+* \textheight=700.50723pt
+* \oddsidemargin=17.92519pt
+* \evensidemargin=17.92519pt
+* \topmargin=-37.00018pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=85.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjk\standard.bdg
+File: standard.bdg 2015/04/18 4.8.4
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjk\extended.enc
+File: extended.enc 2015/04/18 4.8.4
+)
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjk\extended.chr
+File: extended.chr 2015/04/18 4.8.4
+)
+(sys/ctformat.tex
+\c@cnkeywdaccepted=\count140
+\c@numcnkeywds=\count141
+\c@enkeywdaccepted=\count142
+\c@numenkeywds=\count143
+) (info.tex) (sys/cover.tex
+LaTeX Font Info:    Try loading font information for C19+song on input line 5.
+
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\cjk\GB\c19song.fd
+File: c19song.fd 2015/04/18 4.8.4
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <21> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <15.75> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 10.
+LaTeX Font Info:    Calculating math sizes for size <28> on input line 11.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <28> not available
+(Font)              size <24.88> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <19.59991> not available
+(Font)              size <20.74> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <28> not available
+(Font)              size <24.88> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <19.59991> not available
+(Font)              size <20.74> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <28> not available
+(Font)              size <24.88> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <19.59991> not available
+(Font)              size <20.74> substituted on input line 11.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 11.
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <28> not available
+(Font)              size <24.88> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <19.59991> not available
+(Font)              size <20.74> substituted on input line 11.
+
+LaTeX Font Info:    Try loading font information for C19+kai on input line 12.
+
+(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\zhmetrics\c19kai.f
+d
+File: c19kai.fd 2009/09/23 4.8.2
+)
+Package CJKpunct Info: punctuation spaces for family 'kai' do not exist. Use fa
+mily 'def' instead. on input line 12.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 19.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--25
+
+ []
+
+[1
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]) (sys/oath.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <18> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+Package CJKpunct Info: punctuation spaces for family 'song' do not exist. Use f
+amily 'def' instead. on input line 15.
+) (changeformat.tex) [3
+
+]
+\openout2 = `abstract_CN.aux'.
+
+ (abstract_CN.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1
+
+]
+\openout2 = `abstract_EN.aux'.
+
+ (abstract_EN.tex
+Overfull \hbox (3.1467pt too wide) in paragraph at lines 6--6
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--6
+
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1
+
+
+] (main.toc
+Overfull \hbox (3.0pt too wide) detected at line 18
+\OT1/ptm/m/n/12 1.1 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 19
+\OT1/ptm/m/n/12 1.2 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 23
+\OT1/ptm/m/n/12 1.3 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 24
+\OT1/ptm/m/n/12 1.4 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 26
+\OT1/ptm/m/n/12 2.1 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 27
+\OT1/ptm/m/n/12 2.2 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 28
+\OT1/ptm/m/n/12 2.3 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 29
+\OT1/ptm/m/n/12 2.4 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 31
+\OT1/ptm/m/n/12 3.1 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 32
+\OT1/ptm/m/n/12 3.2 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 33
+\OT1/ptm/m/n/12 3.3 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 34
+\OT1/ptm/m/n/12 3.4 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 36
+\OT1/ptm/m/n/12 4.1 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 37
+\OT1/ptm/m/n/12 4.2 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 38
+\OT1/ptm/m/n/12 4.3 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 39
+\OT1/ptm/m/n/12 4.4 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 41
+\OT1/ptm/m/n/12 5.1 
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 42
+\OT1/ptm/m/n/12 5.2 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2
+
+])
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
+\openout2 = `pre.aux'.
+
+ (pre.tex
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 24.
+ ("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1
+
+]
+\openout2 = `chapter/chap1.aux'.
+
+ (chapter/chap1.tex
+File: figures/2.eps Graphic file (type eps)
+ <figures/2.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1
+
+
+]
+File: figures/3.eps Graphic file (type eps)
+ <figures/3.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
+Underfull \vbox (badness 1043) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4]
+File: figures/4.eps Graphic file (type eps)
+ <figures/4.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+File: figures/5.eps Graphic file (type eps)
+ <figures/5.eps>
+File: figures/6.eps Graphic file (type eps)
+ <figures/6.eps>
+Underfull \vbox (badness 2189) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
+File: figures/7.eps Graphic file (type eps)
+ <figures/7.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
+\openout2 = `chapter/chap2.aux'.
+
+ (chapter/chap2.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12
+
+
+]
+\openout2 = `chapter/chap3.aux'.
+
+ (chapter/chap3.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13
+
+
+]
+\openout2 = `chapter/chap4.aux'.
+
+ (chapter/chap4.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14
+
+
+]
+\openout2 = `chapter/chap5.aux'.
+
+ (chapter/chap5.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15
+
+
+]
+\openout2 = `bib.aux'.
+
+ (bib.tex
+Underfull \hbox (badness 1107) in paragraph at lines 12--13
+\OT1/ptm/m/n/10.5 Ap-pear-ances.[C]//Visual Database Sys-tem Ii, El-se-vier. Da
+l-las, United States: ACM,
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 13--14
+[]\OT1/ptm/m/n/10.5 Swain M, Bal-lard D. Color in-dex-ing[J]. In-ter-na-tional 
+Jour-nal of Com-puter Vi-sion,
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16
+
+
+]
+Underfull \hbox (badness 7433) in paragraph at lines 34--35
+[]\OT1/ptm/m/n/10.5 Riedl M, Bie-mann C. Top-ic-Til-ing: a text seg-men-ta-tion
+ al-go-rithm based on
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 52--53
+[]\OT1/ptm/m/n/10.5 Zhang B, Wang Z, Tao D, et al. Au-to-matic Pre-view Frame S
+e-lec-tion for On-line
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
+\openout2 = `appendix.aux'.
+
+ (appendix.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19
+
+
+]
+\openout2 = `resume.aux'.
+
+ (resume.tex
+File: figures/Lamport.eps Graphic file (type eps)
+ <figures/Lamport.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20
+
+
+])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]
+\openout2 = `acknowledge.aux'.
+
+ (acknowledge.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22
+
+
+] (main.aux (abstract_CN.aux) (abstract_EN.aux) (pre.aux) (chapter/chap1.aux) (
+chapter/chap2.aux) (chapter/chap3.aux) (chapter/chap4.aux)
+(chapter/chap5.aux) (bib.aux) (appendix.aux) (resume.aux) (acknowledge.aux))
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 3.12pt have occurred.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 8248 strings out of 493324
+ 126176 string characters out of 3139068
+ 176258 words of memory out of 3000000
+ 11448 multiletter control sequences out of 15000+200000
+ 85733 words of font info for 310 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,14n,43p,1497b,839s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on main.dvi (30 pages, 149320 bytes).

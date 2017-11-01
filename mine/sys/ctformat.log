@@ -1,0 +1,17 @@
+This is e-TeX, Version 3.141592-2.2 (MiKTeX 2.4) (preloaded format=latex 2006.10.12)  30 MAY 2013 15:51
+entering extended mode
+**ctformat.tex
+(ctformat.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8g> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, french, loaded.
+
+! LaTeX Error: \contentsname undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \renewcommand{\contentsname}
+                                 {\centerline{\song\xiaoerhao Ŀ\quad ¼}}
+? 

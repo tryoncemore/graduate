@@ -1,0 +1,819 @@
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.9.30)  30 SEP 2017 13:46
+entering extended mode
+**./abstract_CN.tex
+(abstract_CN.tex
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1 replaced by U+FFFD.
+
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+! Undefined control sequence.
+l.2 \lhead
+          {\xiaowuhao\cnthesistitle}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2 \lhead{\xiaowuhao
+                     \cnthesistitle}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2 \lhead{\xiaowuhao\cnthesistitle
+                                   }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.3 \chead
+          {}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.4 \rhead
+          {\xiaowuhaoժҪ}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.4 \rhead{\xiaowuhaoժҪ
+                         }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment CNabstract undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{CNabstract}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ժ
+      Ҫ¸�(���ĵ���Ҫ��Ϣ£¬°�(�о¿Ŀµġ¢·½·�...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no ժ in font nullfont!
+Missing character: There is no Ҫ in font nullfont!
+Missing character: There is no ¸ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ĵ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no Ҫ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no Ϣ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no о in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Ŀ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no ġ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no ¨ in font nullfont!
+Missing character: There is no ¡ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no ɹ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ս in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ۡ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no һ in font nullfont!
+Missing character: There is no ҳ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no « in font nullfont!
+Missing character: There is no ² in font nullfont!
+Missing character: There is no » in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no � in font nullfont!
+! Extra }, or forgotten \endgroup.
+l.8 ...�������һҳµ«²»³¬¹�}
+                                                  ҳ,˶ʿ����ժҪһ�...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Missing character: There is no ҳ in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no ˶ in font nullfont!
+Missing character: There is no ʿ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ժ in font nullfont!
+Missing character: There is no Ҫ in font nullfont!
+Missing character: There is no һ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no 㲻 in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ֡ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 9 replaced by U+FFFD.
+Missing character: There is no ² in font nullfont!
+Missing character: There is no © in font nullfont!
+Missing character: There is no ʿ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ժ in font nullfont!
+Missing character: There is no Ҫ in font nullfont!
+Missing character: There is no һ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no 㲻 in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ֡ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no ؼ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ǹ in font nullfont!
+Missing character: There is no © in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no õ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Missing character: There is no Ӧ in font nullfont!
+Missing character: There is no ² in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ܸ in font nullfont!
+Missing character: There is no ² in font nullfont!
+Missing character: There is no ¸ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no Ҫ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ݵ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ͨ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ô in font nullfont!
+Missing character: There is no ʡ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no ؼ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no ʱ in font nullfont!
+Missing character: There is no ¾ in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ¸ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ˶ in font nullfont!
+Missing character: There is no ʿ in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ¸ in font nullfont!
+! Undefined control sequence.
+l.10 ...�¹ؼ�´ʱ¾¿�3-5¸�˶ʿ5-7¸����©
+                                                  ʿ7-9¸�%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ʿ in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ¸ in font nullfont!
+Missing character: There is no � in font nullfont!
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no ؼ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ֮ in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no " in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no " in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no ָ in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no ؼ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no ʲ in font nullfont!
+Missing character: There is no » in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no Ӣ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ļ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no д in font nullfont!
+Missing character: There is no ¡ in font nullfont!
+Missing character: There is no £ in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--12
+[] 
+ []
+
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 13 replaced by U+FFFD.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ±
+       ¾¿ơ¢˶ʿ����ժҪһ°����2¶Σ¬µ�һ¶��о�...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no ± in font nullfont!
+Missing character: There is no ¾ in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no ơ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Missing character: There is no ˶ in font nullfont!
+Missing character: There is no ʿ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ժ in font nullfont!
+Missing character: There is no Ҫ in font nullfont!
+Missing character: There is no һ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ¶ in font nullfont!
+Missing character: There is no Σ in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no һ in font nullfont!
+Missing character: There is no ¶ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no о in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no ¾ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no ¨ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ۱ in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no ¾ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no ¡ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Missing character: There is no Ӧ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ñ in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no ¾ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no © in font nullfont!
+Missing character: There is no ¡ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 14 replaced by U+FFFD.
+Missing character: There is no � in font nullfont!
+Missing character: There is no о in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no » in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no ¾ in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no ¡ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no ¨ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ֶ in font nullfont!
+Missing character: There is no Ρ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Missing character: There is no Ӱ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ǰ in font nullfont!
+Missing character: There is no ¾ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no ڶ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ¶ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no о in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ݡ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no ɹ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ¡ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ֵ in font nullfont!
+Missing character: There is no ¡ in font nullfont!
+Missing character: There is no ¢ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no Ͳ in font nullfont!
+Missing character: There is no » in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ֮ in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no ¦ in font nullfont!
+Missing character: There is no ¡ in font nullfont!
+Missing character: There is no £ in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 13--15
+[] 
+ []
+
+Invalid UTF-8 byte or sequence at line 16 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 16 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 16 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 16 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 16 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 16 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 16 replaced by U+FFFD.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ²
+       ©ʿ����ժҪ¿ɷֶν��ܴ´�µ㡣
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no ² in font nullfont!
+Missing character: There is no © in font nullfont!
+Missing character: There is no ʿ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ժ in font nullfont!
+Missing character: There is no Ҫ in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no ɷ in font nullfont!
+Missing character: There is no ֶ in font nullfont!
+Missing character: There is no ν in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ܴ in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no 㡣 in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{CNabstract}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \end{CNabstract}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 16--18
+[]
+ []
+
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 19 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 20 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 23 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 24 replaced by U+FFFD.
+! Undefined control sequence.
+l.24 \cnkeywd
+             {ѧλ����}% ����һ��ؼ�´�
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \cnkeywd{ѧ
+                λ����}% ����һ��ؼ�´�
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no ѧ in font nullfont!
+Missing character: There is no λ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
+Invalid UTF-8 byte or sequence at line 25 replaced by U+FFFD.
+! Undefined control sequence.
+l.25 \cnkeywd
+             {¸�ʽ}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ¸ in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no ʽ in font nullfont!
+Invalid UTF-8 byte or sequence at line 26 replaced by U+FFFD.
+! Undefined control sequence.
+l.26 \cnkeywd
+             {ģ°�}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ģ in font nullfont!
+Missing character: There is no ° in font nullfont!
+Missing character: There is no � in font nullfont!
+)
+! Emergency stop.
+<*> ./abstract_CN.tex
+                     
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 427834
+ 92 string characters out of 3152470
+ 60877 words of memory out of 3000000
+ 4066 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 6i,0n,6p,84b,19s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

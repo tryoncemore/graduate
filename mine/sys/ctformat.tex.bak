@@ -1,0 +1,186 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  本文件定义了目录、摘要以及各种标题的格式
+%%  用户不可修改本文件。如果确需修改，请在 thesis/*/changeformat.tex
+%%  中 (其中的星号为 GB2312 或 UTF-8) 用下述方式修改 (以 \contentsname 命令的
+%%  修改为例)：
+%%  \renewcommand{\contentsname}{目次}
+%%  如果用户要添加新的命令，也请在 thesie/*/changeformat.tex 中用
+%%  \newcommand{\newcmd}{...(命令的定义内容)}
+%%  的方式定义，其中 \newcmd 是所要定义的命令名称。
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\renewcommand{\contentsname}{\centerline{\song\xiaoerhao 目\quad 录}}
+\renewcommand{\listfigurename}{\centerline{\song\xiaoerhao 插图目录}}
+\renewcommand{\listtablename}{\centerline{\song\xiaoerhao 表格目录}}
+
+
+\newcommand{\di}{第\quad}
+\newcommand{\zhang}{\hspace{0.55em}章}
+\titlecontents{part}[2em]{\song\xiaosihao}{\contentslabel{2em}\hspace*{1em}}%
+  {\hspace*{-2.3em}}{\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{section}[-0.2em]{\song\xiaosihao}{\di\contentslabel{0.5em}\zhang\hspace*{1em}}%
+  {}{\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{subsection}[2em]{\song\xiaosihao}%
+  {\contentslabel{1em}\hspace*{1em}}{}%
+  {\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{subsubsection}[2em]{\song\xiaosihao}%
+  {\contentslabel{2em}\hspace*{1em}}{\hspace*{-2.3em}}%
+  {\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{subsubsubsection}[3em]{\song\xiaosihao}%
+  {\contentslabel{2em}\hspace*{1em}}{\hspace*{-2.3em}}%
+  {\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{paragraph}[4em]{\song\xiaosihao}%
+  {\contentslabel{3em}\hspace*{1em}}{\hspace*{-2.3em}}%
+  {\titlerule*[0.5pc]{.}\contentspage}
+\setcounter{tocdepth}{2}
+
+
+
+\makeatletter
+  \renewcommand\part{%
+      \@startsection{part}{5}{0mm}{1.5\baselineskip}{2.0\baselineskip}%
+      {\song\xiaoerhao\centering\bf}%
+    }
+%  \renewcommand\section{%
+%      \@startsection{section}{2}{0mm}{1.5\baselineskip}{2.0\baselineskip}%
+%      {\centering\xiaoerhao\bfseries}%
+%    }
+
+%\renewcommand\section{\@startsection {section}{1}{\z@}%
+%                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+%                                   {1.3ex \@plus.2ex}%
+%                                   {\normalfont\normalsize\bfseries}}
+%\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+%                                     {-3mm\@plus -1mm \@minus -.2mm}%
+%                                     {-3mm \@plus -2mm}%
+%                                     {\song\sanhao\bfseries}}
+
+  \renewcommand\subsection{%
+      \@startsection{subsection}{2}{0mm}{0.1\baselineskip}{0.1\baselineskip}%
+      {\song\sanhao\bfseries}%
+    }
+
+%  \renewcommand\subsection{%
+%      \@startsection{subsection}{2}{0mm}{1.0\baselineskip}{1.0\baselineskip}%
+%      {\song\sanhao\bfseries}%
+%    }
+  \renewcommand\subsubsection{%
+      \@startsection{subsubsection}{2}{0mm}{0.0001\baselineskip}{0.01\baselineskip}%
+      {\song\xiaosihao\bf}%
+    }
+
+%  \renewcommand\paragraph{%
+%      \@startsection{paragraph}{2}{0mm}{0.5\baselineskip}{0.5\baselineskip}%
+%      {\song\xiaosihao\bf}%
+%    }
+\makeatother
+\newcommand\sijisection{\noindent{\song\xiaosihao\bf(\thesection)}\quad}
+\newcommand\wujisection{\noindent{\song\xiaosihao\bf{\alph{section}}}\quad}
+
+\newcommand{\sectionindex}{第 \thesection{} 章}
+\titleformat{\section}{\centering\xiaoerhao\bfseries}{\sectionindex}{1em}{\vspace{0.5\baselineskip}}
+
+
+
+
+
+\renewcommand{\ncaptionlabeldelim}{~~}                 %重新设置标题分隔符为空。原来为":"
+
+\renewcommand{\figurename}{\song\wuhao图}
+\numberwithin{figure}{section}\renewcommand\thefigure{\song\wuhao\arabic{section}-\arabic{figure}} %设置图标编号格式
+\renewcommand\tablename{\song\sihao表}
+\numberwithin{table}{section}\renewcommand\thetable{\song\sihao\arabic{section}-\arabic{table}}%设置表格编号格式
+\renewcommand{\arraystretch}{1.5}%修改行间距
+\newcommand{\ncaption}{%设置标题上下间距
+\setlength{\abovecaptionskip}{10pt}%
+\setlength{\belowcaptionskip}{10pt}%
+\caption}
+\numberwithin{equation}{section} %设置公式编号格式
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%  下面定义了中英文摘要环境和关键词命令
+%%  用户在此不可修改。
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 关键词的最大个数：
+\newcommand{\maxnumkeywds}{10}
+
+% 定义中文摘要环境 CNabstract:
+\newenvironment{CNabstract}{%
+    \newpage
+    \pagenumbering{Roman}
+    \xiaosihao
+    {\renewcommand\baselinestretch{1.0}\selectfont
+    \begin{tabular}{ll}
+    \hspace{-2em}论文题目：&\cnthesistitle\\
+    \hspace{-2em}专\qquad业：&\subject\\
+    \hspace{-2em}\ifthenelse{\equal{\thesisgrade}{B}}{本 科}{\ifthenelse{\equal{\thesisgrade}{M}}{硕 士}{\ifthenelse{\equal{\thesisgrade}{D}}{博 士}}} 生：&\thesisauthor\\
+    \hspace{-2em}指导教师：&\advisor\\
+    \end{tabular}
+    }
+    \part{摘要}
+  }{\vskip 2em}
+
+% 定义中文关键词命令 \cnkeywd:
+\newcounter{cnkeywdaccepted}
+\newcounter{numcnkeywds}
+\newcommand{\cnkeywd}[1]{%
+    \ifthenelse{\value{cnkeywdaccepted} = 0}{%
+        \noindent{\bf{关键词：}}\stepcounter{cnkeywdaccepted}%
+      }{}%
+    \ifthenelse{\isempty{#1}}{}{%
+        \ifthenelse{\value{numcnkeywds} = \maxnumkeywds}{% 关键词数目不能太多，
+        % 否则……
+        \vskip 3cm \HEI \Large
+        关键词数目已经超过 \thenumcnkeywds~条，不符合要求！
+        \end{CJK}
+        \end{document}
+      }{}%
+    \ifthenelse{\value{numcnkeywds} = 0}{}{，}%
+        #1%
+    \stepcounter{numcnkeywds}%
+      }%
+  }
+
+% 定义英文摘要环境 ENabstract:
+\newenvironment{ENabstract}{%
+    \newpage
+    \begin{tabular}{lp{12cm}l}
+    \hspace{-2em}{Title:}&\enthesistitle\\
+    \hspace{-2em}{Major:}&\ENsubject\\
+    \hspace{-2em}{Name:}&\ENthesisauthor\\
+    \hspace{-2em}{Supervisor:}&\ENadvisor\\
+    \end{tabular}
+    \renewcommand\abstractname{Abstract}
+    \part{\abstractname}
+  }{%
+    \vskip 2em
+  }
+
+% 定义英文关键词命令 \enkeywd:
+\newcounter{enkeywdaccepted}
+\newcounter{numenkeywds}
+\newcommand{\enkeywd}[1]{%
+    \ifthenelse{\value{enkeywdaccepted} = 0}{%
+        \noindent{\bf{\xiaosihao Keywords: }}\stepcounter{enkeywdaccepted}%
+      }{}%
+    \ifthenelse{\isempty{#1}}{}{%
+        \ifthenelse{\value{numenkeywds} = \maxnumkeywds}{% 关键词数目不能太多，
+        % 否则……
+        \vskip 3cm \HEI \Large
+        关键词数目已经超过 \thenumenkeywds~条，不符合要求！
+        \end{CJK}
+        \end{document}
+      }{}%
+    \ifthenelse{\value{numenkeywds} = 0}{}{,  }%
+        #1%
+    \stepcounter{numenkeywds}%
+      }%
+  }

@@ -1,0 +1,5 @@
+%论文作者若需要修改论文格式，可以在该文件中添加格式修改命令。
+%%行距设置，1.5倍
+\ifthenelse{\equal{\thesisgrade}{B}}{\linespread{1.5}}%
+{\ifthenelse{\equal{\thesisgrade}{M}}{\linespread{1.5}}%
+{\ifthenelse{\equal{\thesisgrade}{D}}{\linespread{1.5}}}}%

@@ -1,0 +1,24 @@
+\begin{titlepage}
+\vspace*{3cm}
+
+\begin{center}
+\song\yihao中山大学\ifthenelse{\equal{\thesisgrade}{B}}{学士}{\ifthenelse{\equal{\thesisgrade}{M}}{硕士}{\ifthenelse{\equal{\thesisgrade}{D}}{博士}}}学位论文\\[3.0cm]
+%\end{center}
+%\begin{center}
+\textbf{\song\erhao\cnthesistitle}\\[0.5cm]
+
+\textbf{\song\sanhao\vspace{\baselineskip}\enthesistitle}\\[2.3cm]
+\begin{tabular}{ll}
+\KAI\sihao学位申请人：&\KAI\sihao\textbf{\uline{\thesisauthor}}\\[0.4cm] %此处填作者姓名
+\KAI\sihao指导教师：  &\KAI\sihao\textbf{\uline{\advisor}}\\[0.4cm]    %此处填写导师姓名
+\KAI\sihao专业名称：  &\KAI\sihao\textbf{\uline{\subject}}\\[0.4cm]  %此处填专业名称
+\end{tabular}\\[1.0cm]
+\end{center}
+\hspace{2cm}\KAI\sihao答辩委员会主席（签名）：\par
+\vspace{\baselineskip}
+\hspace{1.16cm}\KAI\sihao答辩委员会委员（签名）：\\[4.0cm]
+\begin{center}
+%\newline
+\thesisdate
+\end{center}
+\end{titlepage}
