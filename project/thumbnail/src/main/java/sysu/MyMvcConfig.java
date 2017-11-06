@@ -38,14 +38,13 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {// 2
 		registry.addResourceHandler("/js/*").addResourceLocations("/WEB-INF/js/");
 		registry.addResourceHandler("/img/*").addResourceLocations("/WEB-INF/img/");
 		registry.addResourceHandler("/css/*").addResourceLocations("/WEB-INF/css/");
-		registry.addResourceHandler("/data/*").addResourceLocations("/WEB-INF/data/");
+		registry.addResourceHandler("/data/**").addResourceLocations("/WEB-INF/data/");
 
 	}
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("").setViewName("/index");
-		registry.addViewController("/index").setViewName("/index");
+		registry.addViewController("").setViewName("/index2");
 	}
 
 	

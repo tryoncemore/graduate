@@ -39,8 +39,8 @@
 					class="icon-bar"></span>
 			</button>
 			<!-- <a class="navbar-brand" href="index.html">MOOC<span style="color:#F79626;">Tube</span></a> -->
-			<a class="navbar-brand" href="../"><span
-				id="tube">Video Thumbnail</span></a>
+			<a class="navbar-brand" href="../"><span id="tube">Video
+					Thumbnail</span></a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse"
@@ -60,15 +60,75 @@
 					</form>
 				</li>
 
+
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->
 	</div>
 	<!-- /.container --> </nav>
-	<div class="container">
-		<div id="main">
-			<div class="col-lg-12" id="left">
+	<div id="main">
+		<div id="left" class="container">
+			<div class="row">
+				<div class="col-md-4">left</div>
+				<div class="col-md-8">
+					right-top
+					<div class="col-md-12">right-bottom</div>
+
+				</div>
 			</div>
+			<ul id="videos" class="og-grid row">
+				<li class='video_li col-md-12'>
+					<div class='divPoster col-md-5'>
+						<img src='/data/thumbnail/xMj_P_6H69g/default.jpg'>
+					</div>
+					<div class='divInfo col-md-7'>
+
+						<form class="navbar-form navbar-left col-md-12">
+							<div class="form-group">
+								<input type="text" class="form-control">
+							</div>
+							<button type="submit" class="btn btn-default">Search</button>
+						</form>
+
+
+						<div id="keywords_xMj_P_6H69g" class="col-md-12" width="610px"
+							height="100px"></div>
+					</div>
+				</li>
+
+				<li class='video_li'>
+					<div class='divPoster'>
+						<img class="thumbnail"
+							src='/data/thumbnail/40riCqvRoMs/default.jpg'>
+					</div>
+					<div class='divInfo'>
+						<form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input type="text" class="form-control">
+							</div>
+							<button type="submit" class="btn btn-default">Search</button>
+						</form>
+						<div id="keywords_40riCqvRoMs"></div>
+					</div>
+				</li>
+
+				<li class='video_li'>
+					<div class='divPoster'>
+						<img class="thumbnail"
+							src='/data/thumbnail/F7Id9caYw-Y/default.jpg'>
+					</div>
+					<div class='divInfo'>
+						<form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input type="text" class="form-control">
+							</div>
+							<button type="submit" class="btn btn-default">Search</button>
+						</form>
+						<div id="keywords_F7Id9caYw-Y"></div>
+					</div>
+				</li>
+			</ul>
+
 		</div>
 
 		<footer>
@@ -180,26 +240,26 @@
 		//这是一个模似函数，实现向后台发送ajax查询请求，并返回一个查询结果数据，传递给前台的JS,再由前台JS来展示数据。本函数由程序员进行修改实现查询的请求
 		//参数为一个字符串，是搜索输入框中当前的内容
 		function sendKeyWordToBack(keyword) {
-				 $.ajax({
-						   type: "POST",
-						   url: "/getRelatedWords",
-						   async:false,
-						   data: "key="+keyword,
-						   dataType: "json",
-						   success: function(data){
-							 console.log(data);
-							 var aData = [];
-							 for(var i=0;i<data.length;i++){
-									//以下为根据输入返回搜索结果的模拟效果代码,实际数据由后台返回
-									
-								if(data[i]!=""){
-									  aData.push(data[i]);
-								}
-							 }
-							//将返回的数据传递给实现搜索输入框的输入提示js类
-							 searchSuggest.dataDisplay(aData);
-						   }
-			 });	 
+			$.ajax({
+				type : "POST",
+				url : "/getRelatedWords",
+				async : false,
+				data : "key=" + keyword,
+				dataType : "json",
+				success : function(data) {
+					console.log(data);
+					var aData = [];
+					for (var i = 0; i < data.length; i++) {
+						//以下为根据输入返回搜索结果的模拟效果代码,实际数据由后台返回
+
+						if (data[i] != "") {
+							aData.push(data[i]);
+						}
+					}
+					//将返回的数据传递给实现搜索输入框的输入提示js类
+					searchSuggest.dataDisplay(aData);
+				}
+			});
 
 		}
 
