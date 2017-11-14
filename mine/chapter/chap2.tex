@@ -1,13 +1,92 @@
-
+\pagenumbering{arabic}
 \rhead{\xiaowuhao\sectionindex\quad基于双通道信息的视频主题边界检测方法}
 \section{基于双通道信息的视频主题边界检测方法}
-
+\par 视频缩略图图文内容的代表性，缩略图内容与用户查询的相关性是衡量视频缩略图质量的关键指标。因此，自动理解视频内容是生成视频缩略图的基石，理解视频内容一般分为两步：第一步是检测视频主题边界，第二步是概括每一部分的主题内容。本章主要解决第一个问题，即基于视频双通道信息，检测视频主题边界，将视频分成内容独立的主题片段。
+\par 本章首先介绍视频视觉，听觉双通道信息的预处理方法；然后分别介绍视觉通道的主题边界分割方法和听觉通道的主题边界分割方法；最后，综合视觉和听觉双通道信息，检测视频主题边界。
 \subsection{视频双通道信息预处理方法}
-
-\subsection{基于图像信息的主题边界检测方法}
-
-\subsection{基于文本信息的主题边界检测方法}
-
-\subsection{基于视频图文信息融合的主题边界检测方法}
+\par 视频数据是一种由视觉通道和听觉通道双通道信息共同组成的综合媒体数据，具有数据量大，信息结构复杂等特点。本节从视觉通道和听觉通道的两个角度讨论视频数据的预处理方法。
+\subsubsection{视觉通道信息的预处理方法} 
+\par 视频视觉通道上的信息是一系列的视频帧，本文对这些视频帧的预处理方法主要分为两部分：第一部分是镜头分割，第二部分是OCR提取，下面具体阐述这两部分工作。
+\par 视频帧具有极大的重复性，一秒视频通常包含20到40帧画面，时长为一小时的视频包含超过7万张以上的帧画面，如果直接分析这些数量巨大，重复性极高的视频帧内容，不仅耗时，而且很难挖掘到重要信息。镜头分割根据视频帧画面的差异，将内容发生转变的帧画面划分为不同的镜头，相同镜头只保留一帧作为这个镜头的代表帧。学界关于镜头分割的算法有很多，本文采用Apostolidis\upcite{key45}等人提出的算法，其优点不但精度较高，而且通过GPU加速检测过程，可以极大提高镜头分割的效率。
+\par 视频帧画面有时会包含一些文字信息，这些文字信息有很重要的价值，能直观反应视频图像的语义信息。光学字符识别技术（OCR）能提取图像的文字特征，得到图像上的文本内容。光学字符识别技术已比较成熟，目前市面上有很多商业性的OCR识别引擎，如OmniPage\footnote{OmniPage url:http://www.nuance.com/for-business/by-product/pmnipage/index,htm},Readiris\footnote{Readiris url:https://readiris-pro.en.softonic.com/}等等。本文采用Tesseract OCR引擎\upcite{key46,key47},其优点是文本识别准确率很高，而且开源，免费，本文采用Matlab 2015b集成的Tesseract OCR引擎，接口简单，有效。
+\subsubsection{听觉通道信息的预处理方法} 
+\par 视频听觉通道上包含大量的语音信息，语音信息直接反映视频内容。自动语音识别（Automatic Speech Recognition, ASR）能将声音特征转化为计算机易于处理的文本。目前，ASR技术已经有了长足的发展，很多公司和机构提供功能强大的自动语音识别API，例如：美国卡内基梅隆大学开发的CMU Sphinx\footnote{CMU Sphinx, url:http://cmusphinx.sourceforge.net/}开源工具包,其特点是非特定人,词汇量大，且能连续识别语音；Nuance Dragon\footnote{Nuance Dragon Speech Recognition Software(Nuance), url:http://www.nuance.com}工具包提供语音听写功能，使得人们不需要打字就可以创建文档，电子邮件,填写表格等等。本文使用的是微软提供的语音识别工具包\footnote{Microsoft Speech API, url:https://msdn.microsoft.com/en-us/library/ee125663(v=vs.85).aspx}。微软语音识别工具包已比较成熟，识别准确率极高，越来越多的学者将微软语音识别应用到各个领域，并取得了丰厚的研究成果\upcite{key48,key49}。
+\subsection{视觉通道的主题边界检测算法}
+\par 视频视觉通道由一系列视频帧组成，这些视频帧蕴含着视频语义。如图2-1所示，视频视觉通道信息包含视频帧、镜头、场景和视频四个层次。视频帧是组成视频的最小单位，本文以1秒为步长采样视频帧，即一个小时的视频包含3600张视频帧。镜头是一组连续的视频帧，代表视频拍摄过程中某一个镜头下的图像，同一个镜头下的视频帧图像特征相似，内容变化小。场景有一组语义相关的镜头组成，多个场景就组成了整个视频。同一个场景下的视频片段往往蕴含着相同的潜在语义，视频场景边界也暗示着视频主题边界。因此，若仅利用视频视觉通道信息，本文将视频主题分割问题转化为视频场景分割的问题。
+\begin{figure}
+    \centerline{\includegraphics[width=5in]{figures/8.eps}}
+    \ncaption{视频视觉通道信息基本结构}        
+\end{figure}
+\par 本文使用Jeong-Woo\upcite{key50}等人提出的视频场景分割方法，不同于其他常规方法，在对视频帧提取特征时，不仅考虑了图像特征，还考虑了视频音频特征和文字特征，这些特征能更好的反映视频语义，比较符合本文对视频语义主题边界的需要。如图2-2所示，算法首先对视频原始的视频帧序列进行镜头分割以去掉太多重复的帧，然后对过滤后的视频帧进行特征提取，特征包含视觉特征，听觉特征，文字特征3部分。接着根据这些特征进行谱聚类得到初步结果，但是这个结果并不能保证每个类的视频帧在时间轴上是连续的，这不符合场景分割的结果。因此再把每个类的视频帧序列分成在时间轴上连续若干子类，然后对这些子类再进行k-means聚类，选取类中心作为最终场景的片段。
+\begin{figure}
+    \centerline{\includegraphics[width=5in]{figures/9.eps}}
+    \ncaption{视频场景分割流程图}        
+\end{figure}
+\subsection{听觉通道的主题边界检测算法}
+\par 视频听觉通道信息即视频的音频信息，在2.1.2小节本文用微软提供的语音识别工具包将视频音频转换成易于处理的自然语言文本，本小节介绍基于TopicTiling算法的文本主题分割算法。
+\subsubsection{视频语料库主题模型训练}
+\par 本文的视频数据来源于YouTube\footnote{YouTube url：https://www.youtube.com/}网站，利用youtube-dl\footnote{youtube-dl url:http://rg3.github.io/youtube-dl/}爬虫工具爬取了188841个视频，利用语音识别技术将视频语音信息转换成自然语言文本构成了本文视频语料库。本节介绍利用LDA\upcite{key26}（Latent Dirichlet Allocation）训练语料库，挖掘视频内容潜在的主题模型。
+\begin{figure}
+    \centerline{\includegraphics[width=5in]{figures/10.eps}}
+    \ncaption{LDA三层模型}        
+\end{figure}
+\par LDA是一种无监督机器学习技术，它基于贝叶斯概率模型，包含词，主题，文档三层结构。如图2-3所示，LDA认为每一篇文档$\theta$的每个单词w的生成过程都是先以一定概率p(z$|$ $\theta$)选择了某个主题，每个主题下面包含若干个和主题以一定概率的单词，然后在主题的单词表下以一定概率p(w$|$z,$\beta$)生成了这个单词。图中红色标识的部分是语料库表示层，$\alpha$,$\beta$表示语料库级别的参数，每个文档参数都一样；图中黄色标识的部分是文档表示层，$\theta$表示文档别的变量，每个文档对应一个$\theta$;图中绿色标识的是单词表示层，主题z有$\theta$生成，w由z和$\beta$共同生成，一个单词w对应一个主题z。由图2-3知，LDA联合概率公式为：
+\begin{equation}\label{1}
+	p(\theta,z,w|\alpha,\beta)=p(\theta|\alpha)\prod_{n=1}^{N}p(z_n|\theta)p(w_n|z_n,\beta)
+\end{equation}
+LDA模型主要是从给定的语料中学习训练两个控制参数$\alpha$和$\beta$,$\alpha$是Dirichlet分布的参数，用于生成主题$\theta$向量，$\beta$表示各个主题对应的单词概率分布矩阵p(w$|$z),确定了$\alpha$和$\beta$两个全局控制参数，就确定了符合语料库的LDA模型。训练主要思想主要是通过EM算法把w当做观察变量，$\theta$和z当做隐藏变量不断迭代直到收敛。得出$\alpha$和$\beta$。
+\par 本文采用JGibbLDA\footnote{JGibbLDA url:http://jgibblda.sourceforge.net/}做LDA主题模型实现，它是用Gibbs采样做参数估计的LDA算法java版本的实现。通过Griffiths\upcite{key51}提出的交叉验证方法得出当主题个数为40时，各主题相似度最小，算法迭代了1500次，得到LDA训练结果，由于篇幅原因，只给出部分结果如表2-1所示：
+\begin{table}[h]
+\centering
+\caption{视频语料库LDA训练结果}
+\begin{tabular}{|c|c|}
+\hline
+\hline
+Topic Id & Topic Word \\
+\hline
+0 &  roman,greek,temple,emperor,ancient,greeks,greece,forum...\\
+\hline
+1 &  protein,gene,population,genetic,melody,evolution,transcription,fitness...\\
+\hline
+2 & india,afghanistan,indian,pakistan,u.s.,american,national,world... \\
+\hline
+3 & water,species,ocean,population,fish,sea,animal,earth... \\
+\hline
+4 & disease,cancer,health,blood,drug,medicine,hospital,doctor... \\
+\hline
+5 & dante,poem,poet,plant,philosophy,tree,leaves,seed... \\
+\hline
+6 & space,time,data,mission,life,years,day,horizons... \\
+\hline
+7 & africa,u.s.,cuban,latin,brazil,international,global,world... \\
+\hline
+8 & universe,energy,mass,density,gravity,vacuum,radiation,galaxy... \\
+\hline
+... & ... \\
+\hline
+31 & language,english,spanish,literature,author,french,fiction,grammar... \\
+\hline
+32 & climate,oil,carbon,fossil,electricity,environmental,greenhouse,pollution... \\
+\hline
+33 & probability,model,linear,matrix,vector,random,conditional,equation... \\
+\hline
+34 & god,jewish,christian,faith,church,gospel,wisdom,temple... \\
+\hline
+35 & carbon,hydrogen,electron,energy,acid,oxygen,atoms,chemical... \\
+\hline
+36 & dog,cat,horse,feet,teeth,animal,good,eye... \\
+\hline
+37 & cell,blood,eye,brain,bone,neurons,stem,muscle,skin... \\
+\hline
+38 & film,theater,camera,dance,director,television,artist,star... \\
+\hline
+39 & internet,technology,google,digital,facebook,social,youtube,computer...  \\
+\hline
+\end{tabular}
+\end{table} 
+\subsubsection{基于TopicTiling算法的主体边界检测}
+\par TopicTiling\upcite{key25}算法基于TextTiling\upcite{key22}算法，
+\subsubsection{对TopicTiling算法的改进}
+\subsection{基于双通道线索融合的主题边界检测}
 
 \subsection{本章小结}
