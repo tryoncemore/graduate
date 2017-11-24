@@ -1,46 +1,81 @@
 \pagenumbering{arabic}
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  % Use Input in the format of Algorithm  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} % Use Output in the format of Algorithm
 \rhead{\xiaowuhao\sectionindex\quad基于双通道信息的视频主题边界检测方法}
-\section{基于双通道信息的视频主题边界检测方法}
-\par 视频缩略图图文内容的代表性，缩略图内容与用户查询的相关性是衡量视频缩略图质量的关键指标。因此，自动理解视频内容是生成视频缩略图的基石，理解视频内容一般分为两步：第一步是检测视频主题边界，第二步是概括每一部分的主题内容。本章主要解决第一个问题，即基于视频双通道信息，检测视频主题边界，将视频分成内容独立的主题片段。
-\par 本章首先介绍视频视觉，听觉双通道信息的预处理方法；然后分别介绍视觉通道的主题边界分割方法和听觉通道的主题边界分割方法；最后，综合视觉和听觉双通道信息，检测视频主题边界。
+\section{基于双通道信息融合的视频主题边界检测方法}
+\par 视频缩略图图文内容的代表性，缩略图内容与用户查询的相关性是衡量视频缩略图质量的关键指标。因此，自动理解视频内容是生成视频缩略图的基石，理解视频内容一般分为两步：第一步是检测视频主题边界，第二步是概括每一部分的主题内容。本章主要解决第一个问题，即检测视频主题边界，将视频分成内容独立的主题片段。
+\par 视频由视觉通道和听觉通道双通道信息组成，本文基于视频双通道线索检测视频的主题边界。首先对于视频视觉通道一系列视频帧，根据视频帧图像特征对视频进行场景分割，根据视频帧场景的切换位置推测视频主题的边界；接着对于视频听觉通道的视频语音文本特征进行基于TopicTiling算法的主题边界检测；接着，本文根据双通道线索的边界位置，提出了基于双通道信息融合的视频主题边界检测方法；最后，本文给出了实验结果评价方法并且进行了实验结果对比，证明了本文的视频主题边界检测方法准确，有效。
 \subsection{视频双通道信息预处理方法}
-\par 视频数据是一种由视觉通道和听觉通道双通道信息共同组成的综合媒体数据，具有数据量大，信息结构复杂等特点。本节从视觉通道和听觉通道的两个角度讨论视频数据的预处理方法。
+\par 视频数据是一种由视觉通道和听觉通道双通道信息共同组成的综合媒体数据，具有数据量大，信息结构复杂等特点。因此，在分析视频数据之前，需要对其做相应的预处理，将复杂无结构的视频流转化为计算机易于处理的结构化数据，本节从视觉通道和听觉通道的两个角度分别讨论视频数据的预处理方法。
 \subsubsection{视觉通道信息的预处理方法} 
-\par 视频视觉通道上的信息是一系列的视频帧，本文对这些视频帧的预处理方法主要分为两部分：第一部分是镜头分割，第二部分是OCR提取，下面具体阐述这两部分工作。
-\par 视频帧具有极大的重复性，一秒视频通常包含20到40帧画面，时长为一小时的视频包含超过7万张以上的帧画面，如果直接分析这些数量巨大，重复性极高的视频帧内容，不仅耗时，而且很难挖掘到重要信息。镜头分割根据视频帧画面的差异，将内容发生转变的帧画面划分为不同的镜头，相同镜头只保留一帧作为这个镜头的代表帧。学界关于镜头分割的算法有很多，本文采用Apostolidis\upcite{key45}等人提出的算法，其优点不但精度较高，而且通过GPU加速检测过程，可以极大提高镜头分割的效率。
-\par 视频帧画面有时会包含一些文字信息，这些文字信息有很重要的价值，能直观反应视频图像的语义信息。光学字符识别技术（OCR）能提取图像的文字特征，得到图像上的文本内容。光学字符识别技术已比较成熟，目前市面上有很多商业性的OCR识别引擎，如OmniPage\footnote{OmniPage url:http://www.nuance.com/for-business/by-product/pmnipage/index,htm},Readiris\footnote{Readiris url:https://readiris-pro.en.softonic.com/}等等。本文采用Tesseract OCR引擎\upcite{key46,key47},其优点是文本识别准确率很高，而且开源，免费，本文采用Matlab 2015b集成的Tesseract OCR引擎，接口简单，有效。
+\par 视频视觉通道上的信息是一系列的视频帧，本文对这些视频帧的预处理方法主要分为两部分：第一部分是镜头分割，第二部分是OCR识别，下面具体阐述这两部分工作。
+\par 视频帧具有极大的重复性，一秒视频通常包含20到40帧画面，时长为一小时的视频包含超过7万张以上的帧画面，如果直接分析这些数量巨大，重复性极高的视频帧内容，不仅耗时，而且很难挖掘到重要信息。镜头分割根据视频帧画面的差异，将内容发生转变的帧画面划分为不同的镜头，相同镜头只保留一帧作为这个镜头的代表帧，过滤掉绝大多数冗余的视频帧。学界关于镜头分割的算法有很多，本文采用Apostolidis\upcite{key45}等人提出的算法，其优点不但精度较高，而且通过GPU加速检测过程，可以极大提高镜头分割的效率。
+\par 视频帧画面时常会包含一些文字信息，这些文字信息能直观反应视频图像的语义信息，具有很重要的价值。光学字符识别技术（OCR）能提取图像的文字特征，识别图像上的文本内容。光学字符识别技术已比较成熟，目前市面上有很多商业性的OCR识别引擎，如OmniPage\footnote{OmniPage url:http://www.nuance.com/for-business/by-product/pmnipage/index,htm},Readiris\footnote{Readiris url:https://readiris-pro.en.softonic.com/}，Tesseract等等。本文采用Matlab 2015b集成的Tesseract OCR引擎\upcite{key46,key47},其优点是文本识别准确率很高，而且开源，免费。图2-1给出了本文OCR的识别一个结果。
+\begin{figure}[htb]
+    \centerline{\includegraphics[width=5in]{figures/14.eps}}
+    \ncaption{OCR识别结果：(a)为原视频帧，(b)为OCR识别的文本位置，(c)为OCR识别的文本内容}        
+\end{figure}
 \subsubsection{听觉通道信息的预处理方法} 
 \par 视频听觉通道上包含大量的语音信息，语音信息直接反映视频内容。自动语音识别（Automatic Speech Recognition, ASR）能将声音特征转化为计算机易于处理的文本。目前，ASR技术已经有了长足的发展，很多公司和机构提供功能强大的自动语音识别API，例如：美国卡内基梅隆大学开发的CMU Sphinx\footnote{CMU Sphinx, url:http://cmusphinx.sourceforge.net/}开源工具包,其特点是非特定人,词汇量大，且能连续识别语音；Nuance Dragon\footnote{Nuance Dragon Speech Recognition Software(Nuance), url:http://www.nuance.com}工具包提供语音听写功能，使得人们不需要打字就可以创建文档，电子邮件,填写表格等等。本文使用的是微软提供的语音识别工具包\footnote{Microsoft Speech API, url:https://msdn.microsoft.com/en-us/library/ee125663(v=vs.85).aspx}。微软语音识别工具包已比较成熟，识别准确率极高，越来越多的学者将微软语音识别应用到各个领域，并取得了丰厚的研究成果\upcite{key48,key49}。
+\par 上文通过微软语音识别工具包得到视频语音文本，但是往往这些文本中存在大量的冗余信息，本节对这些文本信息做进一步的处理，挖掘出更加有价值的信息。首先过滤掉停止词（Stop Words）\footnote{本文使用的停止词列表：http://xpo6.com/list-of-english-stop-words/}和语音识别输出的冗余的时间戳信息，接着使用Porter算法\upcite{key52}对文本进行提干处理。在英文中，一个单词常常是另一个单词的“变种”，如"happy"和"happiness","play"和"playing",Porter算法能在线性时间对单词进行提干处理，把"happiness"处理成"happy"，"playing"处理成"play"。最后对文本提取关键词，本文使用Rose\upcite{key53}等人的提出的RAKE（Rapid Automatic Keyword Extraction）算法。rake算法提取的关键词并不是一个单一的单词，有可能是一个短语。每个短语的得分由组成短语的单词累加得到，而单词的得分是单词的“度”与单词出现的频率的比值，其中，当与一个词共现的词越多，则该词的度就越大。表2-1给出了使用rake算法对youtube网站视频ID为"40riCqvRoMs"语音文本进行关键词提取的部分结果。
+\begin{table}[htb]
+\centering
+\caption{rake算法提取关键词结果}
+\begin{tabular}{|c|c|}
+\hline
+关键词 & 权值 \\
+\hline
+potentially revolutionary technologies & 9.0\\
+\hline
+explore unseen frontiers & 9.0\\
+\hline
+highly connected neurons & 9.0\\
+\hline
+visual processing apparatus & 8.2\\
+\hline
+typical neural network & 8.0\\
+\hline
+worldwide research community & 8.0\\
+\hline
+neural network & 5.0\\
+\hline
+vision lab & 4.375\\
+\hline
+computer vision & 3.91\\
+\hline
+\end{tabular}
+\end{table} 
 \subsection{视觉通道的主题边界检测算法}
-\par 视频视觉通道由一系列视频帧组成，这些视频帧蕴含着视频语义。如图2-1所示，视频视觉通道信息包含视频帧、镜头、场景和视频四个层次。视频帧是组成视频的最小单位，本文以1秒为步长采样视频帧，即一个小时的视频包含3600张视频帧。镜头是一组连续的视频帧，代表视频拍摄过程中某一个镜头下的图像，同一个镜头下的视频帧图像特征相似，内容变化小。场景有一组语义相关的镜头组成，多个场景就组成了整个视频。同一个场景下的视频片段往往蕴含着相同的潜在语义，视频场景边界也暗示着视频主题边界。因此，若仅利用视频视觉通道信息，本文将视频主题分割问题转化为视频场景分割的问题。
-\begin{figure}
+\par 视频视觉通道由一系列视频帧组成，这些视频帧蕴含着视频语义。如图2-2所示，视频视觉通道信息包含视频帧、镜头、场景和视频四个层次。视频帧是组成视频的最小单位，本文以1秒为步长采样视频帧，即一个小时的视频包含3600张视频帧。镜头是一组连续的视频帧，代表视频拍摄过程中某一个镜头下的图像，同一个镜头下的视频帧图像特征相似，内容变化小。场景有一组语义相关的镜头组成，多个场景就组成了整个视频。不同场景的视频片段一般蕴含了不同的视频语义主题，所以视频场景边界也暗示着视频主题边界。因此，若仅利用视频视觉通道信息，本文将视频主题分割问题转化为视频场景分割的问题。
+\begin{figure}[htb]
     \centerline{\includegraphics[width=5in]{figures/8.eps}}
     \ncaption{视频视觉通道信息基本结构}        
 \end{figure}
-\par 本文使用Jeong-Woo\upcite{key50}等人提出的视频场景分割方法，不同于其他常规方法，在对视频帧提取特征时，不仅考虑了图像特征，还考虑了视频音频特征和文字特征，这些特征能更好的反映视频语义，比较符合本文对视频语义主题边界的需要。如图2-2所示，算法首先对视频原始的视频帧序列进行镜头分割以去掉太多重复的帧，然后对过滤后的视频帧进行特征提取，特征包含视觉特征，听觉特征，文字特征3部分。接着根据这些特征进行谱聚类得到初步结果，但是这个结果并不能保证每个类的视频帧在时间轴上是连续的，这不符合场景分割的结果。因此再把每个类的视频帧序列分成在时间轴上连续若干子类，然后对这些子类再进行k-means聚类，选取类中心作为最终场景的片段。
-\begin{figure}
+\par 本文使用Jeong-Woo\upcite{key50}等人提出的视频场景分割方法，不同于其他常规方法，在对视频帧提取特征时，不仅考虑了图像特征，还考虑了视频音频特征和文字特征，这些特征能更好的反映视频语义，比较符合本文对视频语义主题边界的需要。如图2-3所示，算法首先对视频原始的视频帧序列进行镜头分割以去掉太多重复的帧，然后对过滤后的视频帧进行特征提取，特征包含视觉特征，听觉特征，文字特征3部分。接着根据这些特征进行谱聚类得到初步结果，但是这个结果并不能保证每个类的视频帧在时间轴上是连续的，这不符合场景分割的结果。因此再把每个类的视频帧序列分成在时间轴上连续若干子类，然后对这些子类再进行k-means聚类，选取类中心作为最终场景的片段。
+\begin{figure}[htb]
     \centerline{\includegraphics[width=5in]{figures/9.eps}}
     \ncaption{视频场景分割流程图}        
 \end{figure}
+\par 不同场景一般对应着不同的视频语义主题，但是有些视频场景比较单一，例如有些演讲类视频，它的场景可能就只涉及一个演讲的地点，有些体育类视频，它的场景可能就一直是某个篮球场或者足球场，即同一场景也可能包含不同的视频语义主题，所以如果仅用场景边界作为视频主题边界，往往会造成视频主题分割不足的问题。
 \subsection{听觉通道的主题边界检测算法}
 \par 视频听觉通道信息即视频的音频信息，在2.1.2小节本文用微软提供的语音识别工具包将视频音频转换成易于处理的自然语言文本，本小节介绍基于TopicTiling算法的文本主题分割算法。
 \subsubsection{视频语料库主题模型训练}
 \par 本文的视频数据来源于YouTube\footnote{YouTube url：https://www.youtube.com/}网站，利用youtube-dl\footnote{youtube-dl url:http://rg3.github.io/youtube-dl/}爬虫工具爬取了188841个视频，利用语音识别技术将视频语音信息转换成自然语言文本构成了本文视频语料库。本节介绍利用LDA\upcite{key26}（Latent Dirichlet Allocation）训练语料库，挖掘视频内容潜在的主题模型。
-\begin{figure}
+\begin{figure}[htb]
     \centerline{\includegraphics[width=5in]{figures/10.eps}}
     \ncaption{LDA三层模型}        
 \end{figure}
-\par LDA是一种无监督机器学习技术，它基于贝叶斯概率模型，包含词，主题，文档三层结构。如图2-3所示，LDA认为每一篇文档$\theta$的每个单词w的生成过程都是先以一定概率p(z$|$ $\theta$)选择了某个主题，每个主题下面包含若干个和主题以一定概率的单词，然后在主题的单词表下以一定概率p(w$|$z,$\beta$)生成了这个单词。图中红色标识的部分是语料库表示层，$\alpha$,$\beta$表示语料库级别的参数，每个文档参数都一样；图中黄色标识的部分是文档表示层，$\theta$表示文档别的变量，每个文档对应一个$\theta$;图中绿色标识的是单词表示层，主题z有$\theta$生成，w由z和$\beta$共同生成，一个单词w对应一个主题z。由图2-3知，LDA联合概率公式为：
+\par LDA是一种无监督机器学习技术，它基于贝叶斯概率模型，包含词，主题，文档三层结构。如图2-4所示，LDA认为每一篇文档$\theta$的每个单词w的生成过程都是先以一定概率p(z$|$ $\theta$)选择了某个主题，每个主题下面包含若干个和主题以一定概率的单词，然后在主题的单词表下以一定概率p(w$|$z,$\beta$)生成了这个单词。图中红色标识的部分是语料库表示层，$\alpha$,$\beta$表示语料库级别的参数，每个文档参数都一样；图中黄色标识的部分是文档表示层，$\theta$表示文档别的变量，每个文档对应一个$\theta$;图中绿色标识的是单词表示层，主题z有$\theta$生成，w由z和$\beta$共同生成，一个单词w对应一个主题z。由图2-4知，LDA联合概率公式为：
 \begin{equation}\label{1}
 	p(\theta,z,w|\alpha,\beta)=p(\theta|\alpha)\prod_{n=1}^{N}p(z_n|\theta)p(w_n|z_n,\beta)
 \end{equation}
-LDA模型主要是从给定的语料中学习训练两个控制参数$\alpha$和$\beta$,$\alpha$是Dirichlet分布的参数，用于生成主题$\theta$向量，$\beta$表示各个主题对应的单词概率分布矩阵p(w$|$z),确定了$\alpha$和$\beta$两个全局控制参数，就确定了符合语料库的LDA模型。训练主要思想主要是通过EM算法把w当做观察变量，$\theta$和z当做隐藏变量不断迭代直到收敛。得出$\alpha$和$\beta$。
-\par 本文采用JGibbLDA\footnote{JGibbLDA url:http://jgibblda.sourceforge.net/}做LDA主题模型实现，它是用Gibbs采样做参数估计的LDA算法java版本的实现。通过Griffiths\upcite{key51}提出的交叉验证方法得出当主题个数为40时，各主题相似度最小，算法迭代了1500次，得到LDA训练结果，由于篇幅原因，只给出部分结果如表2-1所示：
-\begin{table}[h]
+LDA模型主要是从给定的语料中学习训练两个控制参数$\alpha$和$\beta$,$\alpha$是Dirichlet分布的参数，用于生成主题$\theta$向量，$\beta$表示各个主题对应的单词概率分布矩阵p(w$|$z),确定了$\alpha$和$\beta$两个全局控制参数，就确定了符合语料库的LDA模型。训练主要思想主要是通过EM算法\footnote{百度百科em算法：https://baike.baidu.com/item/em算法}把w当做观察变量，$\theta$和z当做隐藏变量不断迭代直到收敛。得出$\alpha$和$\beta$。
+\par 本文采用JGibbLDA\footnote{JGibbLDA url:http://jgibblda.sourceforge.net/}做LDA主题模型实现，它是用Gibbs采样做参数估计的LDA算法java版本的实现。通过Griffiths\upcite{key51}提出的交叉验证方法得出当主题个数为40时，各主题相似度最小，算法迭代了1500次，得到LDA训练结果，由于篇幅原因，只给出部分结果如表2-2所示：
+\begin{table}[htb]
 \centering
 \caption{视频语料库LDA训练结果}
 \begin{tabular}{|c|c|}
-\hline
 \hline
 Topic Id & Topic Word \\
 \hline
@@ -84,9 +119,101 @@ Topic Id & Topic Word \\
 \hline
 \end{tabular}
 \end{table} 
-\subsubsection{基于TopicTiling算法的主体边界检测}
-\par TopicTiling\upcite{key25}算法基于TextTiling\upcite{key22}算法，
-\subsubsection{对TopicTiling算法的改进}
+\subsubsection{TopicTiling算法主题边界检测}
+\par TopicTiling\upcite{key25}算法基于TextTiling\upcite{key22}算法，TextTiling算法使用词袋模型（bag of word vectors）作为文本块的特征，由于文档的词典维度很大，通常有几千维甚至上万维，而局部的一个文本块包含的单词数量往往只包含几十到一百多的单词，所以文本块的词向量往往很稀疏，很多维度的值为0，这样不但耗费机器资源，而且不利于反映文本的语义。TopicTiling算法主要改进了文本块特征提取的方法，不再使用bag of word verctors作为文本块的特征，转而使用bag of TopicId vectors，具体来说就是把文本块中每一个词映射到和这个词对应概率最大的主题Id,在上一小节，我们已经对视频语料库做了LDA训练，挖掘出40个潜在的主题，分别对应0-39个TopicId,对于每一个视频的音频文本的单词都对应一个概率最大的TopicId,表示这个单词和这个主题最有可能相关。bag of TopicId有两个明显的优点：第一，相较于bag of word特征，它的维度大大减少，就本文而言一共有40个TopicId,所以特征向量的维度只有40维；第二，bag of TopicId特征考虑了文字背后的语义关联，例如“iphoneX is selling well in China”，“Tim Cook visits Foxconn in TaiWan”两个句子虽然几乎没有单词相同，但句子背后的语义却非常相关。两个句子的bag of word特征截然不同，而它们的bag of TopicId特征却非常接近，显然后者更能挖掘出文本潜在的语义主题。
+\par TopicTiling算法以句子为初始块，提取每个文本块的bag of TopicId特征后，以余弦相似度度量相邻文本块的语义相似度。定义s(c)表示当前文本块和其上下文的关联度，关联度计算如公式2.2所示：
+\begin{equation}\label{1}
+	s(c)=\frac{\sum_{t=1}^{40}w_{t,c}w_{t,p}}{\sqrt{\sum_{t=1}^{40}w_{t,c}^2}\sqrt{\sum_{t=1}^{40}w_{t,p}^2}}+\frac{\sum_{t=1}^{40}w_{t,c}w_{t,f}}{\sqrt{\sum_{t=1}^{40}w_{t,c}^2}\sqrt{\sum_{t=1}^{40}w_{t,f}^2}}
+\end{equation} 
+其中，c表示当前文本块，p表示和当前c文本块相邻的前一个文本块，f表示和当前c文本块相邻的后一个文本块，$w_{t,x}$表示x文本块第t维度bag of TopicId特征的值。公式2.2表明文本块与其上下文关联度s(c)是当前文本块与其相邻前后两个文本块bag of TopicId特征余弦相似度之和。深度分数（depthscore）表示文本块两侧的语义变化的剧烈程度，在其上下文两侧形成“深谷”，其值也就是“深谷”的深度和文本块与其两侧上下文关联度峰值的差值成正比，如图2-5所示，d4的深度分数为1/2*((d2-d2)+(d6-d4))，即红色虚线长度之和的一半。
+\begin{figure}[htb]
+    \centerline{\includegraphics[width=5in]{figures/11.eps}}
+    \ncaption{文本块深度分数}        
+\end{figure}
+公式2.3给出了深度分数$d_c$计算方法：
+\begin{equation}\label{1}
+	d_c=\frac{1}{2}(hl(c)-s(c)+hr(c)-s(c))
+\end{equation} 
+其中hl(c)表示从c文本块左边找到的第一个关联度分数最高的峰值，右边hr(c)同理。深度分数越高表明文本块关联度变化的趋势越剧烈，越有可能是主题边界。用公式2.3算出每一个文本块的深度分数并排序，然后计算深度分数的平均值s及标准差$\sigma$,以s-$\sigma$/2为阈值，深度分数大于该阈值的文本块即为主题边界。本文将TopicTiling算法应用在视频主题边界分割的问题上，将视频语音转文本的结果作为TopicTiling算法的输入，得到视频主题边界的位置，算法1给出了基于TopicTiling的视频主题边界检测算法。
+\begin{algorithm}
+  \centering
+  \caption{基于TopicTiiling的视频主题边界检测算法}  
+  \label{alg:Framwork}  
+  \begin{algorithmic}[1]  
+    \Require  
+		 视频语音转换后得出的自然语言文本text
+    \Ensure  
+         视频主题边界的位置  
+    \Function {$Detect\underline{\hspace{0.5em}} Video\underline{\hspace{0.5em}} Topic\underline{\hspace{0.5em}} Boundary$}{text}
+    \State //对文本text进行分句得到$blocks[\ ]$数组，每个句子初始化为一个文本块
+    \State $blocks[\ ] \gets initialize(text)$
+    \State 初始化$features[\ ][40]$数组，用来记录文本块bag of TopicId特征
+    \For{$block\ in\ quad blocks[\ ]$}
+   		\State //对文本块进行提干
+    	\State $stemmer(block); $
+    	\State //对文本块去停词
+    	\State $porter(block);  $
+    	\State //对文本块提取bag of TopicId特征
+    	\State $features[\ ][40] \gets extractFeatures(block)$
+    \EndFor
+    
+    \State 初始化$contextScores[\ ]$数组，记录文本块上下文关联度分数
+    \For{$feature\ in\ features$}
+    	\State //计算文本块上下文关联度分数
+    	\State $contextScores[\ ] \gets computeContextScore(feature) $
+    \EndFor
+    
+    \State 初始化$depthScore[\ ]$数组，记录文本块深度分数
+    \For{$score\ in\ contextScores$}
+    	\State //计算文本块深度分数
+    	\State $depthScore \gets computeDepthScore(score,contextScores[\ ]) $
+    \EndFor
+    \State //对深度分数进行排序
+    \State $sort detphScore[\ ] $
+    \State //根据公式2.4确定深度分数阈值
+    \State $threshold \gets determineThreshold() $
+    \State 初始化$results[\ ]$,记录视频主题边界位置
+    
+    \For{$ds\ in\ detphScore $}
+    	\If{$ds > s-\sigma/2$}
+    		$results[\ ] \gets position(ds,depthScore[\ ])$
+    	\EndIf
+    \EndFor
+    \State \Return{$results$}
+    \EndFunction
+  \end{algorithmic}  
+\end{algorithm} 
+\par TopicTiling算法在确定深度分数阈值时是基于统计学的方法，即使用s-$\sigma$/2为阈值来确定主题边界，其中s和$\sigma$分别为深度分数的平均值和标准差。深度分数阈值的而确定直接影响主题边界检测结果的质量，如果阈值过大，那么文本会分割不足，需要进一步分割；而如果阈值过小，那么文本会被过度分割成很多细碎的小片段，需要进行合并。由于视频内容的多样性和结构的复杂性，使用TopicTiling算法中确定阈值的方法很难确定合适的阈值，常常造成分割不足或者过度分割。
 \subsection{基于双通道线索融合的主题边界检测}
-
+\par 视频数据由视觉通道线索信息和听觉通道线索信息组成，本章2.2节基于视频视觉线索对视频进行了视频场景分割，由视频场景边界位置推测视频主题边界位置，该方法的问题在于常常造成分割不足的问题；本章2.3节基于视频听觉线索先将视频语音转换为易于处理的自然语言文本，然后针对处理后的文本信息对视频进行主题分割，该方法忽略了明显的视频视觉边界,而且其深度分数的阈值很难确定，影响主题分割的质量。本节综合以上两种方法，提出了基于视频双通道线索融合的主题边界检测方法。
+\subsubsection{确定视频主题的个数}
+\par 在检测视频主题边界位置之前，首要的工作是确定视频主题的个数。本文在确定视频主题个数考虑了三个方面：第一，本文在2.2节仅利用视频视觉通道特征视频进行了主题分割，该方法的原理是视频的场景分割，如上文所述，该方法存在分割不足的问题，所以算法检测的视频主题个数往往会比真实主题个数少，即如果视频有n个场景，那么实际上视频有$\alpha*n$个主题边界，其中$\alpha \textgreater 1$,本文经大量研究总结出经验参数$\alpha$为1.25。第二，视频主题边界个数与视频时长有关，显然越长的视频能讲述越多的内容，其所包含的主题也就越多，一般来说，绝大多数视频一个故事单元的时长在3分钟到5分钟不等，取平均值4分钟，用视频时长除以每个故事单元的平均时长可以估算出视频的主题个数；第三，TopicTiling算法从统计学的角度确定深度分数的阈值从而确定了视频的主题个数，这个方法考虑了不同视频的差异性。综合以上三个因素，本文给出了深度分数阈值的公式2.4：
+\begin{equation}\label{1}
+	threshold=\alpha*1.25n+\beta*\frac{t}{st}+					\theta*count(depthScore[i]) if\ \ depthScore[i]>threshold
+\end{equation} 
+其中n为视频场景的个数，t为视频总时长，st为视频一个故事单元的平均时长240秒，$\alpha$,$\beta$,$\theta$是3个经验参数，就本文而言，它们的值分别为0.80，0.05，0.15。
+\subsubsection{双通道线索融合的主题边界检测}
+\par 本文提出了基于双通道线索融合的视频主题检测方法，在听觉通道线索上，我们在本文2.3节的基础上对TopicTiling算法在确定深度分数阈值上做出了改进，不在从统计学的角度以深度分数的平均值-1/2方差为阈值，而改用公式2.4的阈值计算方法，而且为了后面双通道线索边界融合的需要，我们增加了深度分数的阈值，使得边界的个数是2.4.1小节确定视频主题个数的1.5倍，从而获得了根据听觉通道线索得出的视频主题边界，这些边界为视频语音文本的位置。在视觉通道线索上，本文根据视频场景切换的位置推测视频主题边界的位置，获得根据视频场景分割得出的视频主题边界，这些边界为视频一系列视频帧的位置。视频听觉通道和视觉通道通过时间轴关联，本文给出的视频主题边界为视频一系列的时间点，所以在融合双通道线索主体边界之前首先将上文所述听觉通道上若干个文本边界位置和在视觉通道上的若干个视频帧边界位置都分别映射到它们视频时间点位置。
+\par 获得双通道线索独立的主题边界后，本文接下来阐述如何将根据双通道线索获得的主题边界融合成最优的边界位置。融合过程主要考虑以下两条原则：第一，通过视觉通道线索获得的视频主题边界比通过听觉通道线索获得的边界更可靠，虽然视频一个场景可能包含多个视频语义主题，但是明显地，不同视频场景的切换一定对应着视频语义主题的切换，所以本文优先考虑根据视频视觉通道线索检测到的视频主题边界位置。第二，本文认为最有可能是视频主题边界的位置是根据双通道线索都能检测到的位置，即如果根据视频双通道线索检测到的视频主题边界时间点重合或者说非常接近，那么此时间点极有可能是真正的视频主题边界。下面详述融合过程，通过视频视觉通道线索获得的a个视频主题边界位置设为$\left\{x_1,x_2,...,x_a\right\}$,通过视频听觉通道线索获得的b个视频主题边界位置设为$\left\{y_1,y_2,...,y_b\right\}$，本章2.4.1节确定了视频主题的个数n，由公式2.4可知，n一定大于a。接下来的步骤是一个贪婪选择的过程，对于每一个视觉边界$x_i$在听觉边界列表$\left\{y_1,y_2,...,y_b\right\}$找到一个“最相关”的位置$y_j$,这里“最相关”的定义为以$x_i$为原点以(-60s,60s)为领域找到$y_j$,使得$\left\|x_i-y_j\right\|$最小，如果在(-60s,60s)范围内找不到$y_j$,那么令$y_j$为$x_i$本身。贪婪选择使得每一个视觉主题边界在听觉主题边界列表找到一个映射，如图2-6所示，
+\begin{figure}[htb]
+    \centerline{\includegraphics[width=5in]{figures/12.eps}}
+    \ncaption{视觉通道边界和听觉通道边界融合}        
+\end{figure}
+黑色线条代表时间轴，它是视觉通道和听觉通道的联系，蓝色线条代表视觉通道，其上的点代表我们在视觉通道所检测到的视频主题边界，类似地，红色线条代表听觉通道，其上的点代表我们在听觉通道所检测到的视频主题边界。在确定视觉通道边界与听觉通道边界的映射后，公式2.5给出了基于双通道线索融合的最终位置$p_k$的计算方法，$p_k$位置介于$x_i$和$y_j$位置之间，其中$1 \le k \le a$,$\lambda$为权值，它决定了$p_k$的位置与$x_i$更近还是与$y_j$更近，本文认为视觉通道的边界更加可靠，取$\lambda$为$\frac{1}{3}$。
+\begin{equation}  
+p_k=
+\left\{  
+             \begin{array}{lr}  
+             y_j+\lambda *\left\|x_i-y_j\right\|, & if\  x_i \geq  y_j\\   
+             y_j-\lambda *\left\|x_i-y_j\right\|, & if\  x_i <  y_j   
+             \end{array}  
+\right.  
+\end{equation}  
+\par 在2.4.1本文确定了视频的主题个数n，上文在通过融合视觉通道线索和听觉通道线索得出了a（a为视觉通道边界的个数）个最终主题边界后，我们还需要检测出剩余的n-a个边界，这n-a个边界来自于听觉通道边界且没有映射到视觉通道边界的位置，如图2-7所示黑色点所在位置。我们将听觉通道上的主题边界中没有与视觉通道主题边界形成对应关系位置单独放到一个集合中，并且对这些边界的深度分数排序，选取n-a个最大深度分数的位置（图中绿色线条上黑色的点）作为视频主题边界，这n-a个位置和上文所述的a个位置（图中绿色的点）组成了本文最终的n个视频主题边界。
+\begin{figure}[htb]
+    \centerline{\includegraphics[width=5in]{figures/13.eps}}
+    \ncaption{视频主题边界最终结果}        
+\end{figure}
+\subsubsection{实验结果及评价}
 \subsection{本章小结}
+\par 本章在2.1小节首先介绍视频视觉，听觉双通道信息的预处理方法，对于视觉通道，主要进行镜头分割，关键帧提取，OCR识别；对于听觉通道，主要进行语音识别，并对语音识别的自然言语文本进行去停词，提干，关键词提取等处理。2.2小节介绍了根据视频视觉通道线索检测视频主题边界的过程。2.3小节介绍了根据视频语音转换而来的文本语料库训练过程，及基于TopicTiling算法的视频主题边界检测算法。2.4小节介绍了视频双通道主体边界的融合过程，得出了最终的检测结果，并且对实验结果做对比，证明了本文方法的准确性和有效性。

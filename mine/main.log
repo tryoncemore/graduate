@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.9.28)  14 NOV 2017 21:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.9.28)  23 NOV 2017 20:39
 entering extended mode
 **./main.tex
 (main.tex
@@ -411,15 +411,9 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \extratabsurround=\skip76
 \backup@length=\skip77
 )
-(C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithms\algorit
-hmic.sty
-Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count134
-\c@ALC@line=\count135
-\c@ALC@rem=\count136
-\c@ALC@depth=\count137
-\ALC@tlm=\skip78
-\algorithmicindent=\skip79
+("D:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (C:\Users\Administrator\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithms\algorit
 hm.sty
@@ -427,20 +421,35 @@ Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
  ("D:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count138
+\c@float@type=\count134
 \float@exts=\toks35
 \float@box=\box47
 \@float@everytoks=\toks36
 \@floatcapt=\box48
 )
 \@float@every@algorithm=\toks37
-\c@algorithm=\count139
-))
-("D:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
-\Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (sys/han_zi.tex)
-(sys/format.tex)
+\c@algorithm=\count135
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
+Package: algpseudocode 
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count136
+\c@ALG@rem=\count137
+\c@ALG@nested=\count138
+\ALG@tlm=\skip78
+\ALG@thistlm=\skip79
+\c@ALG@Lnr=\count139
+\c@ALG@blocknr=\count140
+\c@ALG@storecount=\count141
+\c@ALG@tmpcounter=\count142
+\ALG@tmplength=\skip80
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)) (sys/han_zi.tex) (sys/format.tex)
 
 LaTeX Warning: Unused global option(s):
     [openany].
@@ -450,87 +459,96 @@ LaTeX Warning: Unused global option(s):
 
 LaTeX Warning: Label `1' multiply defined.
 
+
+LaTeX Warning: Label `1' multiply defined.
+
+
+LaTeX Warning: Label `1' multiply defined.
+
+
+LaTeX Warning: Label `1' multiply defined.
+
 ) (chapter/chap3.aux) (chapter/chap4.aux) (chapter/chap5.aux) (bib.aux)
 (appendix.aux) (resume.aux) (acknowledge.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 30.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -585,10 +603,10 @@ File: extended.enc 2015/04/18 4.8.4
 File: extended.chr 2015/04/18 4.8.4
 )
 (sys/ctformat.tex
-\c@cnkeywdaccepted=\count140
-\c@numcnkeywds=\count141
-\c@enkeywdaccepted=\count142
-\c@numenkeywds=\count143
+\c@cnkeywdaccepted=\count143
+\c@numcnkeywds=\count144
+\c@enkeywdaccepted=\count145
+\c@numenkeywds=\count146
 ) (info.tex) (sys/cover.tex
 LaTeX Font Info:    Try loading font information for C19+song on input line 5.
 
@@ -754,67 +772,67 @@ Overfull \hbox (3.0pt too wide) detected at line 30
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 34
+Overfull \hbox (3.0pt too wide) detected at line 33
 \OT1/ptm/m/n/12 2.4 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 35
+Overfull \hbox (3.0pt too wide) detected at line 37
 \OT1/ptm/m/n/12 2.5 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 37
+Overfull \hbox (3.0pt too wide) detected at line 39
 \OT1/ptm/m/n/12 3.1 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 38
+Overfull \hbox (3.0pt too wide) detected at line 40
 \OT1/ptm/m/n/12 3.2 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 39
+Overfull \hbox (3.0pt too wide) detected at line 41
 \OT1/ptm/m/n/12 3.3 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 40
+Overfull \hbox (3.0pt too wide) detected at line 42
 \OT1/ptm/m/n/12 3.4 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 41
+Overfull \hbox (3.0pt too wide) detected at line 43
 \OT1/ptm/m/n/12 3.5 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 43
+Overfull \hbox (3.0pt too wide) detected at line 45
 \OT1/ptm/m/n/12 4.1 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 44
+Overfull \hbox (3.0pt too wide) detected at line 46
 \OT1/ptm/m/n/12 4.2 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 45
+Overfull \hbox (3.0pt too wide) detected at line 47
 \OT1/ptm/m/n/12 4.3 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 46
+Overfull \hbox (3.0pt too wide) detected at line 48
 \OT1/ptm/m/n/12 4.4 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 48
+Overfull \hbox (3.0pt too wide) detected at line 50
 \OT1/ptm/m/n/12 5.1 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 49
+Overfull \hbox (3.0pt too wide) detected at line 51
 \OT1/ptm/m/n/12 5.2 
  []
 
@@ -972,9 +990,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \openout2 = `chapter/chap2.aux'.
 
  (chapter/chap2.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -985,8 +1000,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
+File: figures/14.eps Graphic file (type eps)
+ <figures/14.eps>
+Underfull \hbox (badness 3701) in paragraph at lines 17--17
+[]\C19/song/bx/n/12/57 „ \OT1/ptm/m/n/12 2-1 |OCR\C19/song/bx/n/12/55 £ \C19/so
+ng/m/n/12/37 O \C19/song/bx/n/12/46 ( \C19/song/bx/n/12/43 J|\C19/song/bx/n/12/
+26 µ| \OT1/ptm/m/n/12 (a)\C19/song/bx/n/12/58 è \C19/song/m/n/12/63  \C19/song
+/bx/n/12/55 ¿ \C19/song/bx/n/12/52 ™ \C19/song/bx/n/12/64 v|\C19/song/bx/n/12/2
+6 ß| \OT1/ptm/m/n/12 (b)\C19/song/bx/n/12/58 è\OT1/ptm/m/n/12 OCR\C19/song/bx/n
+/12/55 £ \C19/song/m/n/12/37 O \C19/song/bx/n/12/40  \C19/song/bx/n/12/58 © \C
+19/song/m/n/12/37  \C19/song/bx/n/12/58 † \C19/song/bx/n/12/64 ò|\C19/song/bx/
+n/12/26 ß|
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
 File: figures/8.eps Graphic file (type eps)
  <figures/8.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
 File: figures/9.eps Graphic file (type eps)
  <figures/9.eps>
 
@@ -995,7 +1037,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
+[4]
 File: figures/10.eps Graphic file (type eps)
  <figures/10.eps>
 
@@ -1004,28 +1046,97 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [5]
+Underfull \vbox (badness 1147) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+File: figures/11.eps Graphic file (type eps)
+ <figures/11.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 190.
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 190.
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 190.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 190.
+
+
+Overfull \hbox (2.09024pt too wide) detected at line 193
+\OML/cmm/m/it/12 threshold \OT1/cmr/m/n/12 = \OML/cmm/m/it/12  \OMS/cmsy/m/n/1
+2  \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 25\OML/cmm/m/it/12 n \OT
+1/cmr/m/n/12 + \OML/cmm/m/it/12  \OMS/cmsy/m/n/12  [] \OT1/cmr/m/n/12 + \OML/
+cmm/m/it/12  \OMS/cmsy/m/n/12  \OML/cmm/m/it/12 count\OT1/cmr/m/n/12 (\OML/cm
+m/m/it/12 depthScore\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ])\OML/c
+mm/m/it/12 if  depthScore\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ] \
+OML/cmm/m/it/12 > threshold
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+File: figures/12.eps Graphic file (type eps)
+ <figures/12.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
+File: figures/13.eps Graphic file (type eps)
+ <figures/13.eps>)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
 \openout2 = `chapter/chap3.aux'.
 
  (chapter/chap3.tex)
@@ -1035,7 +1146,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6
+[14
 
 
 ]
@@ -1048,7 +1159,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7
+[15
 
 
 ]
@@ -1061,7 +1172,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8
+[16
 
 
 ]
@@ -1085,7 +1196,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9
+[17
 
 
 ]
@@ -1106,14 +1217,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10])
+[18])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]
+[19]
 \openout2 = `appendix.aux'.
 
  (appendix.tex)
@@ -1123,7 +1234,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12
+[20
 
 
 ]
@@ -1138,7 +1249,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13
+[21
 
 
 ])
@@ -1148,7 +1259,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[22]
 \openout2 = `acknowledge.aux'.
 
  (acknowledge.tex)
@@ -1158,7 +1269,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15
+[23
 
 
 ] (main.aux (abstract_CN.aux) (abstract_EN.aux) (pre.aux) (chapter/chap1.aux) (
@@ -1173,12 +1284,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8313 strings out of 493324
- 127364 string characters out of 3139068
- 178282 words of memory out of 3000000
- 11510 multiletter control sequences out of 15000+200000
- 84383 words of font info for 305 fonts, out of 3000000 for 9000
+ 8762 strings out of 493324
+ 134379 string characters out of 3139068
+ 185305 words of memory out of 3000000
+ 11947 multiletter control sequences out of 15000+200000
+ 86379 words of font info for 311 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,14n,48p,1497b,835s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,14n,48p,1497b,843s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.dvi (34 pages, 174312 bytes).
+Output written on main.dvi (42 pages, 208132 bytes).
