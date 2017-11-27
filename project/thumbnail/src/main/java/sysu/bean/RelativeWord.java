@@ -2,6 +2,7 @@ package sysu.bean;
 
 public class RelativeWord implements Comparable<RelativeWord>{
 	public String text;
+	//也可以看做weight
 	public double relation;
 	public RelativeWord(String text, double relation) {
 		super();
