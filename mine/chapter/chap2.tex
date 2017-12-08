@@ -18,34 +18,7 @@
 \end{figure}
 \subsubsection{听觉通道信息的预处理方法} 
 \par 视频听觉通道上包含大量的语音信息，语音信息直接反映视频内容。自动语音识别（Automatic Speech Recognition, ASR）能将声音特征转化为计算机易于处理的文本。目前，ASR技术已经有了长足的发展，很多公司和机构提供功能强大的自动语音识别API，例如：美国卡内基梅隆大学开发的CMU Sphinx\footnote{CMU Sphinx, url:http://cmusphinx.sourceforge.net/}开源工具包,其特点是非特定人,词汇量大，且能连续识别语音；Nuance Dragon\footnote{Nuance Dragon Speech Recognition Software(Nuance), url:http://www.nuance.com}工具包提供语音听写功能，使得人们不需要打字就可以创建文档，电子邮件,填写表格等等。本文使用的是微软提供的语音识别工具包\footnote{Microsoft Speech API, url:https://msdn.microsoft.com/en-us/library/ee125663(v=vs.85).aspx}。微软语音识别工具包已比较成熟，识别准确率极高，越来越多的学者将微软语音识别应用到各个领域，并取得了丰厚的研究成果\upcite{key48,key49}。
-\par 上文通过微软语音识别工具包得到视频语音文本，但是往往这些文本中存在大量的冗余信息，本节对这些文本信息做进一步的处理，挖掘出更加有价值的信息。首先过滤掉停止词（Stop Words）\footnote{本文使用的停止词列表：http://xpo6.com/list-of-english-stop-words/}和语音识别输出的冗余的时间戳信息，接着使用Porter算法\upcite{key52}对文本进行提干处理。在英文中，一个单词常常是另一个单词的“变种”，如"happy"和"happiness","play"和"playing",Porter算法能在线性时间对单词进行提干处理，把"happiness"处理成"happy"，"playing"处理成"play"。最后对文本提取关键词，本文使用Rose\upcite{key53}等人的提出的RAKE（Rapid Automatic Keyword Extraction）算法。rake算法提取的关键词并不是一个单一的单词，有可能是一个短语。每个短语的得分由组成短语的单词累加得到，而单词的得分是单词的“度”与单词出现的频率的比值，其中，当与一个词共现的词越多，则该词的度就越大。表2-1给出了使用rake算法对youtube网站视频ID为"40riCqvRoMs"语音文本进行关键词提取的部分结果。
-\begin{table}[htb]
-\centering
-\caption{rake算法提取关键词结果}
-\begin{tabular}{|c|c|}
-\hline
-关键词 & 权值 \\
-\hline
-potentially revolutionary technologies & 9.0\\
-\hline
-explore unseen frontiers & 9.0\\
-\hline
-highly connected neurons & 9.0\\
-\hline
-visual processing apparatus & 8.2\\
-\hline
-typical neural network & 8.0\\
-\hline
-worldwide research community & 8.0\\
-\hline
-neural network & 5.0\\
-\hline
-vision lab & 4.375\\
-\hline
-computer vision & 3.91\\
-\hline
-\end{tabular}
-\end{table} 
+\par 上文通过微软语音识别工具包得到视频语音文本，但是往往这些文本中存在大量的冗余信息，本节对这些文本信息做进一步的处理，挖掘出更加有价值的信息。首先过滤掉停止词（Stop Words）\footnote{本文使用的停止词列表：http://xpo6.com/list-of-english-stop-words/}和语音识别输出的冗余的时间戳信息，接着使用Porter算法\upcite{key52}对文本进行提干处理。在英文中，一个单词常常是另一个单词的“变种”，如"happy"和"happiness","play"和"playing",Porter算法能在线性时间对单词进行提干处理，把"happiness"处理成"happy"，"playing"处理成"play"。
 \subsection{视觉通道的主题边界检测算法}
 \par 视频视觉通道由一系列视频帧组成，这些视频帧蕴含着视频语义。如图2-2所示，视频视觉通道信息包含视频帧、镜头、场景和视频四个层次。视频帧是组成视频的最小单位，本文以1秒为步长采样视频帧，即一个小时的视频包含3600张视频帧。镜头是一组连续的视频帧，代表视频拍摄过程中某一个镜头下的图像，同一个镜头下的视频帧图像特征相似，内容变化小。场景有一组语义相关的镜头组成，多个场景就组成了整个视频。不同场景的视频片段一般蕴含了不同的视频语义主题，所以视频场景边界也暗示着视频主题边界。因此，若仅利用视频视觉通道信息，本文将视频主题分割问题转化为视频场景分割的问题。
 \begin{figure}[htb]

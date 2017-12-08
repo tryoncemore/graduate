@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
@@ -47,5 +49,14 @@ public class CommenTest {
 	public void testImgLocation() throws IOException {
 		List<ImgLocation> jsonToList = JsonUtils.jsonToList(FileUtils.readFileToString(new File("data/imgLocation.json")), ImgLocation.class);
 		System.out.println(jsonToList.size());
+	}
+	
+	@Test
+	public void testRegex() {
+		Pattern pattern = Pattern.compile("sub(\\d+)\\.jpg");
+		Matcher matcher = pattern.matcher("sub1077.jpg");
+		while(matcher.find()) {
+			System.out.println(matcher.group(1));
+		}
 	}
 }

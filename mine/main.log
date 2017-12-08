@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.9.28)  23 NOV 2017 20:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.9.28)  6 DEC 2017 18:09
 entering extended mode
 **./main.tex
 (main.tex
@@ -468,8 +468,21 @@ LaTeX Warning: Label `1' multiply defined.
 
 LaTeX Warning: Label `1' multiply defined.
 
-) (chapter/chap3.aux) (chapter/chap4.aux) (chapter/chap5.aux) (bib.aux)
-(appendix.aux) (resume.aux) (acknowledge.aux))
+) (chapter/chap3.aux
+
+LaTeX Warning: Label `1' multiply defined.
+
+
+LaTeX Warning: Label `1' multiply defined.
+
+
+LaTeX Warning: Label `1' multiply defined.
+
+
+LaTeX Warning: Label `1' multiply defined.
+
+) (chapter/chap4.aux) (chapter/chap5.aux) (bib.aux) (appendix.aux) (resume.aux)
+(acknowledge.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -549,8 +562,7 @@ LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 30.
-
-("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+ ("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -787,52 +799,52 @@ Overfull \hbox (3.0pt too wide) detected at line 39
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 40
+Overfull \hbox (3.0pt too wide) detected at line 43
 \OT1/ptm/m/n/12 3.2 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 41
+Overfull \hbox (3.0pt too wide) detected at line 44
 \OT1/ptm/m/n/12 3.3 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 42
+Overfull \hbox (3.0pt too wide) detected at line 45
 \OT1/ptm/m/n/12 3.4 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 43
+Overfull \hbox (3.0pt too wide) detected at line 46
 \OT1/ptm/m/n/12 3.5 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 45
+Overfull \hbox (3.0pt too wide) detected at line 48
 \OT1/ptm/m/n/12 4.1 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 46
+Overfull \hbox (3.0pt too wide) detected at line 49
 \OT1/ptm/m/n/12 4.2 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 47
+Overfull \hbox (3.0pt too wide) detected at line 50
 \OT1/ptm/m/n/12 4.3 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 48
+Overfull \hbox (3.0pt too wide) detected at line 51
 \OT1/ptm/m/n/12 4.4 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 50
+Overfull \hbox (3.0pt too wide) detected at line 53
 \OT1/ptm/m/n/12 5.1 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 51
+Overfull \hbox (3.0pt too wide) detected at line 54
 \OT1/ptm/m/n/12 5.2 
  []
 
@@ -1022,13 +1034,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [2]
 File: figures/8.eps Graphic file (type eps)
  <figures/8.eps>
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3]
 File: figures/9.eps Graphic file (type eps)
  <figures/9.eps>
 
@@ -1037,7 +1042,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4]
+[3]
 File: figures/10.eps Graphic file (type eps)
  <figures/10.eps>
 
@@ -1046,8 +1051,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+[4]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [5]
-Underfull \vbox (badness 1147) has occurred while \output is active []
+Underfull \vbox (badness 1430) has occurred while \output is active []
 
 
 
@@ -1059,6 +1071,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [6]
 File: figures/11.eps Graphic file (type eps)
  <figures/11.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1066,6 +1081,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [7]
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 163.
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 163.
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 163.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 163.
+
+
+Underfull \vbox (badness 7981) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1080,22 +1113,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 190.
-
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 190.
-
-("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
-File: omlptm.fd 
-)
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 190.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 190.
-
-
-Overfull \hbox (2.09024pt too wide) detected at line 193
+Overfull \hbox (2.09024pt too wide) detected at line 166
 \OML/cmm/m/it/12 threshold \OT1/cmr/m/n/12 = \OML/cmm/m/it/12  \OMS/cmsy/m/n/1
 2  \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 25\OML/cmm/m/it/12 n \OT
 1/cmr/m/n/12 + \OML/cmm/m/it/12  \OMS/cmsy/m/n/12  [] \OT1/cmr/m/n/12 + \OML/
@@ -1105,6 +1123,11 @@ mm/m/it/12 if  depthScore\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ] \
 OML/cmm/m/it/12 > threshold
  []
 
+File: figures/12.eps Graphic file (type eps)
+<figures/12.eps>
+Underfull \vbox (badness 1221) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1112,17 +1135,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
-File: figures/12.eps Graphic file (type eps)
- <figures/12.eps>
+File: figures/13.eps Graphic file (type eps)
+ <figures/13.eps>
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]
-File: figures/13.eps Graphic file (type eps)
- <figures/13.eps>)
+[11])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1130,26 +1151,94 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[13]
 \openout2 = `chapter/chap3.aux'.
 
- (chapter/chap3.tex)
+ (chapter/chap3.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14
+[13
 
 
 ]
+File: figures/16.eps Graphic file (type eps)
+ <figures/16.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+File: figures/15.eps Graphic file (type eps)
+ <figures/15.eps>
+File: figures/19.eps Graphic file (type eps)
+ <figures/19.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+File: figures/20.eps Graphic file (type eps)
+ <figures/20.eps>
+File: figures/18.eps Graphic file (type eps)
+ <figures/18.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Underfull \vbox (badness 2932) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
+File: figures/21.eps Graphic file (type eps)
+ <figures/21.eps>
+Overfull \hbox (0.24983pt too wide) in paragraph at lines 80--86
+[]\C19/song/bx/n/12/37  \C19/song/bx/n/12/58 © \C19/song/bx/n/12/37 æ \C19/son
+g/bx/n/12/62 ^\OT1/ptm/m/n/12 Mikolov$[]$\C19/song/bx/n/12/40  \C19/song/bx/n/
+12/54 < \C19/song/bx/n/12/57 J \C19/song/bx/n/12/38 Ñ \C19/song/bx/n/12/40 \OT
+1/ptm/m/n/12 word2vec\C19/song/bx/n/12/39 c \C19/song/bx/n/12/59 • \C19/song/bx
+/n/12/48 þ \C19/song/bx/n/12/47 ˜ \C19/song/bx/n/12/45 m O \C19/song/bx/n/12/56
+ Ž \C19/song/bx/n/12/41  {|\C19/song/bx/n/12/26 §| \OT1/ptm/m/n/12 word2vec\C1
+9/song/bx/n/12/51 U
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
 \openout2 = `chapter/chap4.aux'.
 
  (chapter/chap4.tex)
@@ -1159,7 +1248,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15
+[21
 
 
 ]
@@ -1172,7 +1261,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16
+[22
 
 
 ]
@@ -1196,7 +1285,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17
+[23
 
 
 ]
@@ -1217,14 +1306,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18])
+[24]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[25])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26]
 \openout2 = `appendix.aux'.
 
  (appendix.tex)
@@ -1234,7 +1330,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20
+[27
 
 
 ]
@@ -1249,7 +1345,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21
+[28
 
 
 ])
@@ -1259,7 +1355,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22]
+[29]
 \openout2 = `acknowledge.aux'.
 
  (acknowledge.tex)
@@ -1269,7 +1365,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23
+[30
 
 
 ] (main.aux (abstract_CN.aux) (abstract_EN.aux) (pre.aux) (chapter/chap1.aux) (
@@ -1284,12 +1380,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8762 strings out of 493324
- 134379 string characters out of 3139068
- 185305 words of memory out of 3000000
- 11947 multiletter control sequences out of 15000+200000
- 86379 words of font info for 311 fonts, out of 3000000 for 9000
+ 8832 strings out of 493324
+ 135538 string characters out of 3139068
+ 192337 words of memory out of 3000000
+ 12009 multiletter control sequences out of 15000+200000
+ 87729 words of font info for 316 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,14n,48p,1497b,843s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,14n,48p,1497b,845s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.dvi (42 pages, 208132 bytes).
+Output written on main.dvi (49 pages, 235164 bytes).

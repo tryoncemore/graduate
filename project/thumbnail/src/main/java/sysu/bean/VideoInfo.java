@@ -2,9 +2,13 @@ package sysu.bean;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@JsonInclude(Include.NON_NULL) 
 public class VideoInfo {
 	private String videoId;
-	private List<RelativeWord> subtitles;
+	private List<Word> subtitles;
 	private List<String> ocr;
 	private List<MainImage> mainImages;
 	private List<SubImage> subImages;
@@ -14,10 +18,11 @@ public class VideoInfo {
 	public void setVideoId(String videoId) {
 		this.videoId = videoId;
 	}
-	public List<RelativeWord> getSubtitles() {
+	
+	public List<Word> getSubtitles() {
 		return subtitles;
 	}
-	public void setSubtitles(List<RelativeWord> subtitles) {
+	public void setSubtitles(List<Word> subtitles) {
 		this.subtitles = subtitles;
 	}
 	public List<String> getOcr() {

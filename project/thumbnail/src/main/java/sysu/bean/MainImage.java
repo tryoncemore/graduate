@@ -2,14 +2,28 @@ package sysu.bean;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@JsonInclude(Include.NON_NULL) 
 public class MainImage {
 	private String imageName;
 	private int x1;
 	private int y1;
 	private int x2;
 	private int y2;
-	private String pos;
+	//手动推荐的位置
+	private String fixedpos;
 	private List<String> description;
+	private int time;
+	private String path;
+	
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
 	public List<String> getDescription() {
 		return description;
 	}
@@ -46,12 +60,19 @@ public class MainImage {
 	public void setY2(int y2) {
 		this.y2 = y2;
 	}
-	public String getPos() {
-		return pos;
+	public String getFixedpos() {
+		return fixedpos;
 	}
-	public void setPos(String pos) {
-		this.pos = pos;
+	public void setFixedpos(String fixedpos) {
+		this.fixedpos = fixedpos;
 	}
+	public int getTime() {
+		return time;
+	}
+	public void setTime(int time) {
+		this.time = time;
+	}
+	
 	
 	
 	

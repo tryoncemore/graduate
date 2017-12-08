@@ -7,9 +7,12 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -18,27 +21,28 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
+import org.junit.Test;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import net.coobird.thumbnailator.Thumbnails;
-
-import sysu.bean.ImgLocation;
+import sysu.bean.MainImage;
 import sysu.bean.Rect;
 import sysu.bean.RelativeWord;
+import sysu.bean.SubImage;
+import sysu.bean.VideoInfo;
+import sysu.bean.Word;
 import sysu.utils.JsonUtils;
 
 @Controller("thumbnail")
 public class ThumbnailController {
 	private static Map<String,double[]> word2vex;
-	private static Map<String,List<String>> videoKeywords;
-	private static Map<String,ImgLocation> imgLocations;
+	private VideoInfo videoInfo;
+	private static String[] defaultLayout=new String[] {"14","23","123","234","134","124","1234"};
 	static {
 		word2vex=new HashMap<String,double[]>(450000);
-		videoKeywords=new HashMap<String,List<String>>();
-		imgLocations=new HashMap<String,ImgLocation>();
 		List<String> w2v=null;
 
 		try {
@@ -55,30 +59,17 @@ public class ThumbnailController {
 			word2vex.put(str[0], vector);
 		}
 
-		try {
-			for (File file : new File("data/videoKeywords/plain").listFiles()) {
-				List<String> list = FileUtils.readLines(file);
-				videoKeywords.put(file.getName().substring(0, 11), list);
-			} 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		try {
-			List<ImgLocation> jsonToList = JsonUtils.jsonToList(FileUtils.readFileToString(new File("data/imgLocation.json")), ImgLocation.class);
-			for(ImgLocation il:jsonToList) {
-				imgLocations.put(il.getVideoid(), il);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
 	}
 	@RequestMapping(value="/getThumbnail/{videoid}/{query}",produces="text/plain;charset=UTF-8")
 	public @ResponseBody String getThumbnail(@PathVariable("videoid")String videoid,@PathVariable("query")String query,HttpServletRequest request) {
 		query=query.trim();
 		if(validate(query)) {
-			String[] texts = findRelativeWords(query,videoKeywords.get(videoid));
+			try {
+				videoInfo=JsonUtils.jsonToBean(FileUtils.readFileToString(new File("data/videoinfos/"+videoid+".json")), VideoInfo.class);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			String[] texts = findRelativeWords(query,videoInfo.getSubtitles());
 			String path=generateThumbnail(texts,videoid,query,request.getServletContext().getRealPath("/"));
 			return path;
 		}else {
@@ -98,68 +89,141 @@ public class ThumbnailController {
 		return false;
 	}
 
-	private String generateThumbnail(String[] texts, String videoid, String query, String realPath) {
+	private String generateThumbnail(String[] texts, String videoid,String query, String realPath) {
 		try {
-			BufferedImage major = ImageIO.read(new File("data/videoframes/"+videoid+"/main.jpg"));
-			ImgLocation il=imgLocations.get(videoid);
-			int x1=il.getX1();
-			int x2=il.getX2();
+			MainImage mainImage = videoInfo.getMainImages().get(0);
+			BufferedImage major = ImageIO.read(new File(mainImage.getPath()));
+			int x1=mainImage.getX1();
+			int x2=mainImage.getX2();
 			int width=major.getWidth();
 			int height=major.getHeight();
 			int padding = 10;
-			int lw = x1-2*padding;
-			int rw = width-x2-2*padding;
 			Font font = new Font("TimesRoman", Font.BOLD,80);
 			Graphics2D g = major.createGraphics();
 			Map<Integer,Rect> map=new HashMap<Integer,Rect>();
-			int imageCount=0;
-			for(char c:il.getPos().toCharArray()) {
-				String s="data/videoframes/"+videoid+"/sub"+c+".jpg";
+			Random random=new Random();
+			String layout=null;
+			if(StringUtils.isBlank(mainImage.getFixedpos())) 
+				layout=defaultLayout[random.nextInt(7)];
+			else
+				layout=mainImage.getFixedpos();
+				
+			List<String> relativeSubs=getRelativeSubs(layout.length(),query);	
+			//String randomSubs=getRandomSubs(6,layout.length());
+			int subpos[][]=new int[4][2];
+			subpos[0][0]=x1-2*padding;subpos[0][1]=height;
+			subpos[1][0]=width-x2-2*padding;subpos[1][1]=height;
+			subpos[2][0]=x1-2*padding;subpos[2][1]=height;
+			subpos[3][0]=width-x2-2*padding;subpos[3][1]=height;
+
+			for(int i=0;i<layout.length();i++) {
+				char c=layout.charAt(i);
+				String s=relativeSubs.get(i);
 				BufferedImage sub=ImageIO.read(new File(s));
 
 				if(c=='1') {	
-					double scale = (double)lw/sub.getWidth();
-					if(scale>=0) {
+					double scalex = (double)subpos[0][0]/sub.getWidth();
+					double scaley = (double)subpos[0][1]/sub.getHeight();
+					double scale=Math.min(scalex, scaley);
+					if(scale>0.1&&scale<1.7) {
 						sub = Thumbnails.of(s).scale(scale).asBufferedImage();
+						subpos[2][1]=height-sub.getHeight()-3*padding;
 						g.drawImage(sub, padding, padding, sub.getWidth(), sub.getHeight(), null);		
-						imageCount++;
 						map.put(1, new Rect(padding, padding, sub.getWidth(), sub.getHeight()));
 					}
+
+
 				}else if(c=='2') {
-					double scale = (double)rw/sub.getWidth();
-					if(scale>=0) {
+					double scalex = (double)subpos[1][0]/sub.getWidth();
+					double scaley = (double)subpos[1][1]/sub.getHeight();
+					double scale=Math.min(scalex, scaley);
+					if(scale>0.1&&scale<1.7) {
 						sub = Thumbnails.of(s).scale(scale).asBufferedImage();
+						subpos[3][1]=height-sub.getHeight()-3*padding;
 						g.drawImage(sub, x2+padding, padding, sub.getWidth(), sub.getHeight(), null);	
-						imageCount++;
 						map.put(2, new Rect(x2+padding, padding, sub.getWidth(), sub.getHeight()));
 					}
+
+
 				}else if(c=='3') {
-					double scale = (double)lw/sub.getWidth();
-					if(scale>=0) {
+					double scalex = (double)subpos[2][0]/sub.getWidth();
+					double scaley = (double)subpos[2][1]/sub.getHeight();
+					double scale=Math.min(scalex, scaley);
+					if(scale>0.1&&scale<1.7) {
 						sub = Thumbnails.of(s).scale(scale).asBufferedImage();
+						subpos[0][1]=height-sub.getHeight()-3*padding;
 						g.drawImage(sub, padding, height-padding-sub.getHeight(), sub.getWidth(), sub.getHeight(), null);	
-						imageCount++;
 						map.put(3, new Rect( padding, height-padding-sub.getHeight(), sub.getWidth(), sub.getHeight()));
 					}
+
+
 				}else {
-					double scale = (double)rw/sub.getWidth();
-					if(scale>=0) {
+					double scalex = (double)subpos[3][0]/sub.getWidth();
+					double scaley = (double)subpos[3][1]/sub.getHeight();
+					double scale=Math.min(scalex, scaley);
+					if(scale>0.1&&scale<1.7) {
 						sub = Thumbnails.of(s).scale(scale).asBufferedImage();
+						subpos[1][1]=height-sub.getHeight()-3*padding;
 						g.drawImage(sub, x2+padding, height-padding-sub.getHeight(), sub.getWidth(), sub.getHeight(), null);		
-						imageCount++;
 						map.put(4, new Rect(x2+padding, height-padding-sub.getHeight(), sub.getWidth(), sub.getHeight()));
 					}
+
+
 				}
 			}
 			DrawText(map,g,height,width,texts,x1,x2,font);
 			g.dispose();	
-			System.out.println(realPath+"/WEB-INF/data/thumbnail/"+videoid+"/"+query+".jpg");
 			ImageIO.write(major, "jpg", new File(realPath+"/WEB-INF/data/thumbnail/"+videoid+"/"+query+".jpg"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return "/data/thumbnail/"+videoid+"/"+query+".jpg";
+	}
+
+	private List<String> getRelativeSubs(int length, String query) {
+		String[] queries=query.split(" ");
+		TreeSet<SubImage> subImages=new TreeSet<SubImage>();
+		for(SubImage subImage:videoInfo.getSubImages()) {
+			List<String> desList=subImage.getDescription();
+			String[] description=new String[desList.size()];
+			for(int i=0;i<description.length;i++)
+				description[i]=desList.get(i);
+			subImage.setScore(computerRelation(description,queries));
+ 			subImages.add(subImage);
+		}
+		List<String> res = new ArrayList<String>();
+		for(int i=0;i<length;i++)
+			res.add(subImages.pollFirst().getPath());
+		return res;
+
+	}
+
+	private String getRandomSubs(int subbum,int num) {
+		Set<Integer> set=new HashSet<Integer>();
+		Random random=new Random();
+		StringBuilder sb=new StringBuilder();
+		while(num>0) {
+			int r;
+			while(true) {
+				r=random.nextInt(subbum);
+				if(set.contains(r))
+					continue;
+				else {
+					set.add(r);
+					break;
+				}
+					
+			}
+			sb.append(r+"");
+			num--;
+		}
+		return sb.toString();
+	}
+	
+	@Test
+	public void testRandomSubs() {
+		System.out.println(getRandomSubs(9, 5));
 	}
 
 	private void DrawText(Map<Integer, Rect> map, Graphics2D g, int height, int width, String[] texts, int x1, int x2, Font font) {
@@ -268,12 +332,12 @@ public class ThumbnailController {
 		return false;
 	}
 
-	public String[] findRelativeWords(String query, List<String> list) {
+	public String[] findRelativeWords(String query, List<Word> list) {
 		String[] queries=query.split(" ");
 		String[] res=new String[10];
 		TreeSet<RelativeWord> set=new TreeSet<RelativeWord>();
-		for(String s:list) {
-			set.add(new RelativeWord(s, computerRelation(s.split(" "),queries)));
+		for(Word word:list) {
+			set.add(new RelativeWord(word.getText(), computerRelation(word.getText().split(" "),queries)));
 		}
 		int count=Math.max(10, set.size());
 		for(int i=0;i<10;i++)
@@ -283,6 +347,7 @@ public class ThumbnailController {
 
 	private double computerRelation(String[] videowords, String[] queries) {
 		double sum=0d;
+		
 		//map videowords to queries
 		for(String s1:videowords) {
 			if(word2vex.containsKey(s1)) {

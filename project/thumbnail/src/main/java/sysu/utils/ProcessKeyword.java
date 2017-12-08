@@ -8,6 +8,8 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
+import sysu.bean.Word;
+
 public class ProcessKeyword {
 	@Test
 	public void json2plain() throws IOException {

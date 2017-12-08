@@ -85,15 +85,19 @@ public class Seacher {
 		booleanQuery.add(endQuery, Occur.MUST);
 		
 		TopDocs topDocs = searcher.search(booleanQuery,null, 1); 
-		System.out.println(topDocs.totalHits);
 		List<String> res=new ArrayList<String>();
 		for(ScoreDoc sd:topDocs.scoreDocs) {
 			Document doc=searcher.doc(sd.doc);
 			res.add(doc.get("context"));
-			System.out.println(doc.get("videoId")+" "+doc.get("begintime")+" "+doc.get("endtime")+doc.get("context"));
 		}
-		if(res.size()>0)
-			return res.get(0);
+		if(res.size()>0) {
+			String result="";
+			for(String s:res) {
+				s=s.trim()+" ";
+				result+=s;
+			}
+			return result.trim();
+		}
 		else
 			return "";
 	}
