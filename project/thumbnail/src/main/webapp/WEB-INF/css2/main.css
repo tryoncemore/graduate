@@ -1,0 +1,31 @@
+.main_svg{
+	/*background-color: #eee;*/
+	cursor: crosshair;
+}
+.main_svg g{
+	cursor: pointer;
+}
+img{
+	 display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+	
+
+.title {
+    font-family: Helvetica;
+    left: 30%;
+    position: absolute;
+    overflow: hidden;
+    font-size: 44px;
+    color:#ccc;
+  
+}
+.image-cropper {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 50%;
+}

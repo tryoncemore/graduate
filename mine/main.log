@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.9.28)  6 DEC 2017 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=latex 2017.9.28)  18 DEC 2017 22:37
 entering extended mode
 **./main.tex
 (main.tex
@@ -481,8 +481,11 @@ LaTeX Warning: Label `1' multiply defined.
 
 LaTeX Warning: Label `1' multiply defined.
 
-) (chapter/chap4.aux) (chapter/chap5.aux) (bib.aux) (appendix.aux) (resume.aux)
-(acknowledge.aux))
+) (chapter/chap4.aux) (chapter/chap5.aux) (bib.aux
+
+LaTeX Warning: Label `key61' multiply defined.
+
+) (appendix.aux) (resume.aux) (acknowledge.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -562,7 +565,8 @@ LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 30.
- ("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -824,27 +828,27 @@ Overfull \hbox (3.0pt too wide) detected at line 48
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 49
+Overfull \hbox (3.0pt too wide) detected at line 51
 \OT1/ptm/m/n/12 4.2 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 50
+Overfull \hbox (3.0pt too wide) detected at line 52
 \OT1/ptm/m/n/12 4.3 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 51
+Overfull \hbox (3.0pt too wide) detected at line 55
 \OT1/ptm/m/n/12 4.4 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 53
+Overfull \hbox (3.0pt too wide) detected at line 57
 \OT1/ptm/m/n/12 5.1 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 54
+Overfull \hbox (3.0pt too wide) detected at line 58
 \OT1/ptm/m/n/12 5.2 
  []
 
@@ -1241,7 +1245,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [20]
 \openout2 = `chapter/chap4.aux'.
 
- (chapter/chap4.tex)
+ (chapter/chap4.tex
+File: figures/22.eps Graphic file (type eps)
+ <figures/22.eps>
+Underfull \vbox (badness 1817) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1252,6 +1261,43 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+File: figures/23.eps Graphic file (type eps)
+ <figures/23.eps>
+Underfull \vbox (badness 6792) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23]
+File: figures/24.eps Graphic file (type eps)
+ <figures/24.eps>
+File: figures/25.eps Graphic file (type eps)
+ <figures/25.eps>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25]
 \openout2 = `chapter/chap5.aux'.
 
  (chapter/chap5.tex)
@@ -1261,7 +1307,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22
+[26
 
 
 ]
@@ -1285,7 +1331,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23
+[27
 
 
 ]
@@ -1306,21 +1352,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]
+[28]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25])
+[29])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[30]
 \openout2 = `appendix.aux'.
 
  (appendix.tex)
@@ -1330,7 +1376,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27
+[31
 
 
 ]
@@ -1345,7 +1391,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28
+[32
 
 
 ])
@@ -1355,7 +1401,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29]
+[33]
 \openout2 = `acknowledge.aux'.
 
  (acknowledge.tex)
@@ -1365,7 +1411,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30
+[34
 
 
 ] (main.aux (abstract_CN.aux) (abstract_EN.aux) (pre.aux) (chapter/chap1.aux) (
@@ -1380,12 +1426,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8832 strings out of 493324
- 135538 string characters out of 3139068
- 192337 words of memory out of 3000000
- 12009 multiletter control sequences out of 15000+200000
- 87729 words of font info for 316 fonts, out of 3000000 for 9000
+ 8869 strings out of 493324
+ 136217 string characters out of 3139068
+ 192342 words of memory out of 3000000
+ 12042 multiletter control sequences out of 15000+200000
+ 88539 words of font info for 319 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,14n,48p,1497b,845s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,14n,48p,1497b,847s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on main.dvi (49 pages, 235164 bytes).
+Output written on main.dvi (53 pages, 251204 bytes).

@@ -1,0 +1,29 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size:12px;
+	font-family: "ËÎÌå"£¬arial, Helvetica, sans-serif;
+}
+img{border:none;}
+
+#center {
+	Z-INDEX: 2; POSITION: absolute; /*LEFT: 16%*/
+}
+#slider {
+	Z-INDEX: 1; POSITION: absolute; WIDTH: 1140px; HEIGHT: 80px; /*OVERFLOW: hidden;*/ /*LEFT: -200px*/
+}
+#slider .slide {
+	Z-INDEX: 10; POSITION: absolute; BORDER-LEFT: #fafafa 2px solid;  HEIGHT: 80px;  CURSOR: default
+}
+#slider .slide img {
+    width:100px;height:80px;
+}
+
+#slider .diapo {
+	POSITION: absolute; FILTER: alpha(opacity=100);/* VISIBILITY: visible;*/ opacity: 1;  OVERFLOW: hidden;
+}s
+
+
+#shotShow {
+	padding-left: 10px;
+}

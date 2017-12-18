@@ -3,7 +3,9 @@ package sysu;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,5 +33,15 @@ public class ExtractId {
 	public void testRegex() {
 		boolean matches = Pattern.matches(".*/watch\\?v=\\p{ASCII}{11}.*", "fefq:/watch?v=zRQd9F5NLCk\\fasf");
 		System.out.println(matches);
+	}
+	
+	@Test
+	public void quchong() throws IOException {
+		List<String> list=FileUtils.readLines(new File("E:\\videovis\\video\\pages\\ted"));
+		Set<String> set=new HashSet<String>();
+		for(String s:list) {
+			set.add(s);
+		}
+		FileUtils.writeLines(new File("E:\\videovis\\video\\pages\\TED"), set);
 	}
 }

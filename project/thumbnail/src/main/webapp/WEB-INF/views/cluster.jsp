@@ -8,19 +8,19 @@
 		<link rel="stylesheet" type="text/css"
 			href="//fonts.googleapis.com/css?family=Orbitron" />
 
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
-		<script src="/js/d3.min.js"></script>
-		<script src="/js/d3.layout.cloud.js"></script>
-		<script type="text/javascript" src="/js/carrotsearch.foamtree.js"></script>
-		<script type="text/javascript" src="/js/hammer.min.js"></script>
-		<script type="text/javascript" src="/js/jqcloud-1.0.4.js"></script>
-		<script type="text/javascript" src="/js/main.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/d3.min.js"></script>
+		<script src="js/d3.layout.cloud.js"></script>
+		<script type="text/javascript" src="js/carrotsearch.foamtree.js"></script>
+		<script type="text/javascript" src="js/hammer.min.js"></script>
+		<script type="text/javascript" src="js/jqcloud-1.0.4.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 
 		<!-- Latest compiled and minified CSS -->
 
-		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-			<link rel="stylesheet" type="text/css" href="/css/jqcloud.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+			<link rel="stylesheet" type="text/css" href="css/jqcloud.css">
 				<link rel="stylesheet"
 					href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 					integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -39,8 +39,8 @@
 					class="icon-bar"></span>
 			</button>
 			<!-- <a class="navbar-brand" href="index.html">MOOC<span style="color:#F79626;">Tube</span></a> -->
-			<a class="navbar-brand" href="../"><span id="MOOC">MOOC</span><span
-				id="tube">Tube</span></a>
+			<a class="navbar-brand" href="../"><span id="MOOC">Video</span><span
+				id="tube">Vis</span></a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse"
@@ -66,16 +66,13 @@
 	</div>
 	<!-- /.container --> </nav>
 	<div class="container">
-		<div id="main">
-			<div class="col-lg-5" id="left">clustering</div>
-			<div class="col-lg-7" id="right">
-				<div id="search_result_info">
-					<span id="videocnt"></span> results.
-				</div>
+		<div id="main" class="row">
+			<div class="col-md-5" id="left">clustering</div>
+			<div class="col-md-7" id="right">
+				<ul id="video" class="og-grid">
 
-				<div id="search_result">
-
-					<!--<ul id="og-grid" class="og-grid">
+				</ul>
+				<!--<ul id="og-grid" class="og-grid">
 				
 				 <li class='video_li'>
 					<a class='videolink'>
@@ -94,10 +91,6 @@
 					</a>
 				</li> 
 			</ul>-->
-				</div>
-				<div id='divPager'>
-					<ul class='pager' id='pagerid'></ul>
-				</div>
 				<!-- <div>
 			<img src="https://i.ytimg.com/vi/lapwgqzWC5g/hqdefault.jpg">
 			<p>Dangerous Object: Hallmark Dummy Launcher - Wired</p>

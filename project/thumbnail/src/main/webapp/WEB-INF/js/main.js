@@ -43,7 +43,35 @@ function ajax_search(word,page) {
 	console.log(searchText);
 	// var page = 1;
 	loadClusters(word);
-	loadCovers(word);
+	//loadCovers(word);
+	loadThumbnails(word);
+}
+
+function loadThumbnails(word){
+	var videos=['40riCqvRoMs','F7Id9caYw-Y','xMj_P_6H69g','1','2'];
+	var keyword=$("#searchTxt").val();
+	$ul=$("#video");
+	for(var i=0;i<videos.length;i++){
+		$li=$("<li class='video_li'></li>");
+		$li.attr("id",videos[i]);
+
+		$div1=$("<div class='divPoster'></div>");
+		$img=$("<img></img>");
+		$img.attr("src","/data/thumbnail/"+videos[i]+"/default.jpg");
+		$img.attr("id","img_"+videos[i]);
+		$img.click(function(){
+	    	var url = "/toVideo?q=" + encodeURIComponent(keyword)+"&videoId="+$(this).attr('id').substring(4);
+	    	console.log(url);
+			window.location.href=url;
+
+		});
+		
+		$div1.append($img);
+		$li.append($div1);
+
+		$ul.append($li);
+	}
+
 }
 
 function loadCovers(word){
@@ -87,12 +115,12 @@ function loadCovers(word){
 				});
 				svg = document.createElement("div");
 				$(svg).jQCloud(data.words[i],
-				    {
-				    width:data.wordsPos[i].width ,
-				    height: data.wordsPos[i].height,
-				    shape: 'rectangular',  //rectangular
-				   
-				    }
+						{
+					width:data.wordsPos[i].width ,
+					height: data.wordsPos[i].height,
+					shape: 'rectangular',  //rectangular
+
+						}
 				);
 				$d.append(svg);
 				$div.append($d);
@@ -272,23 +300,26 @@ function loadResult(videos,size_li,current_li){
 }
 
 function loadClusters(key){
-	var url="/newcluster";
+	var url="/cluster";
 	//var url ="/cluster";
-		$.ajax({
-			url:url,
-			type:"GET",
-			data:"key="+key,
-			dataType:"json",
-			success:function(data){
-				console.log(data);
-				var foamtree = new CarrotSearchFoamTree({
-					id:"left",
-					dataObject:{
-						groups:data
-					}
-				});
-			}
-		});
+	$.ajax({
+		url:url,
+		type:"GET",
+		data:"key="+key,
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+			var foamtree = new CarrotSearchFoamTree({
+				id:"left",
+				dataObject:{
+					groups:data
+				},
+				onGroupSelectionChanged: function (info) {
+					window.console.log("selected", info);
+				}
+			});
+		}
+	});
 
 }
 
