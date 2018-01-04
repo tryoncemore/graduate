@@ -1,6 +1,6 @@
 package sysu.bean;
 
-public class Word{
+public class Word implements Comparable<Word>{
 	public String text;
 	public int weight;
 	
@@ -26,6 +26,14 @@ public class Word{
 	}
 	public void setWeight(int weight) {
 		this.weight = weight;
+	}
+
+	@Override
+	public int compareTo(Word o) {
+		if(this.weight>o.getWeight())
+			return 1;
+		else
+			return -1;
 	}
 
 	

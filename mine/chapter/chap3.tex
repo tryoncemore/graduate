@@ -77,18 +77,90 @@ computer vision & 3.91\\
 \par 本节介绍视频缩略图图文内容提取方法，图文内容的质量直接决定了缩略图的质量，本文提取缩略图图文内容时主要考虑其代表性和与用户查询意图的相关性。关于代表性，上一节本文将无结构的视频数据结构化为一个个精炼、具有高度概括性和代表性的图文二元组，本节将这些图文二元组作为视频缩略图候选图文内容。本节后续内容将介绍如何在这些候选图文二元组中选取符合用户查询意图的图文内容。
 \par 用户在视频分享网站里搜索自己感兴趣的视频时，一个典型的搜索过程如下：用户输入代表自己搜索意图的查询词，网站搜索引擎根据查询词返回相关视频给用户。本文计算用户查询词与视频主题单元图文二元组的相关性，以倒序相关性排序图文二元组，选取排名靠前的图文二元组作为视频缩略图内容。
 \par 图像内在的语义比较抽象，虽然Karpathy\upcite{key58}等人基于深度网络建立了图片与语义空间的映射从而描述了图片的语义，而本文希望能在用户浏览的过程中在用户可接受的时间内生成出动态的缩略图，但是这种方法是相对耗时的，显然不能满足本文需求。图文二元组的图文在时间维度上是重合的，因此它们的语义是紧密相连的，所以本文计算图文二元组中关键词序列与查询词的相关性来衡量它们之间的相关度。要解决这个问题，首先要把这些自然语言符号数学化，在自然语言处理领域中通常用词向量表示自然言语中的单词。一种最简单的词向量方式是"one-hot representation"，向量的维度为预料库词典的长度，向量的分量只有一个1，其他全为0。这种方法虽然简单，但缺点也很明显，第一，向量维度冗长，容易造成维度灾难；第二，这种向量有”词汇鸿沟“的问题，不能很好的刻画词与词的相似性。本文采用Hinton\upcite{key59}提出的词向量"Distributed Representation"的表示方法，其基本思想在于将语料库训练成一个向量空间，使得语料库中每一个词都对应向量空间中一个固定长度的向量，当计算两个词之间的相似度时，则根据这两个词对应的向量的距离来判断它们之间的相似性。
-\par 本文采用Mikolov\upcite{key60,key61}等人提出的word2vec词向量空间计算方法，word2vec能在百万乃至上亿数量及的语料库上进行高效的训练\upcite{key61}。他们使用名为一个浅层神经网络语言模型“Skip-gram Model”对语料库中的每一个词做向量表示，如图3-6所示，模型分为输入层，投影层，输出层。Skip-gram模型在输入已知的w(t)前提下，预测其上下文w(t-2),w(t-1),w(t+1),w(t+2)。
 \begin{figure}[htb]
-    \centerline{\includegraphics[width=5in]{figures/21.eps}}
+    \centerline{\includegraphics[width=5in]{figures/38.eps}}
     \ncaption{Skip-gram Model}        
 \end{figure}
+\par 本文采用Mikolov\upcite{key60,key61}等人提出的word2vec词向量空间计算方法，word2vec能在百万乃至上亿数量及的语料库上进行高效的训练\upcite{key61}。他们使用名为一个浅层神经网络语言模型“Skip-gram Model”对语料库中的每一个词做向量表示，如图3-6所示，模型分为输入层，投影层，输出层。Skip-gram模型在输入已知的w(t)前提下，预测其上下文w(t-2),w(t-1),w(t+1),w(t+2)。
 在训练过程中，使得每个词向量与其上下文对数概率P最大化，公式3.4给出了P的计算方法，给定单词序列$w_1,w_2,...,w_T$，nb(t)是单词$w_t$上下文单词集合，$p(w_j|w_t)$是$w_j$和$w_t$两个单词词向量的层次softmax。
 \begin{equation}\label{1}
 	P=\frac{1}{T}\sum_{t=1}^{T}\sum_{j\epsilon nb(t)}logp(w_j|w_t)
 \end{equation} 
-
-\subsection{视频缩略图生成方法}
-
+本文以大约18万个视频文本内容作为训练数据，得到语料库中每一个词汇的特征向量，每个向量50维，两个词语义相关度以两词向量余弦距离衡量，表3-2展示了部分单词以上述方法得出的最相关的词汇。
+\begin{table}[htb]
+\centering
+\caption{基于Wordvex最相关词汇挖掘}
+\begin{tabular}{|c|c|}
+\hline
+word & related word \\
+\hline
+computer &  computers,software,technology,electronic,internet,computing,devices,digital\\
+\hline
+human &  animal,rights,aids,nature,particular,body,that,causes\\
+\hline
+apple & blackberry,chips,iphone,microsoft,ipad,ipod,intel,software \\
+\hline
+movie & movies,film,films,comedy,hollywood,drama,sequel,animated\\
+\hline
+network & network,networks,cable,channel,channels,internet,television,media,satellite \\
+\hline
+smile & grin,smiles,eyes,smiling,laugh,touch,gentle,smirk,tears,whisper \\
+\hline
+music & musical,dance,songs,recording,folk,studio,contemporary,artists \\
+\hline
+history & historical,tradition,great,career,ever,life,greatest,literature,decades,origins \\
+\hline
+language & languages,word,spoken,vocabulary,translation,arabic,refers,dialect\\
+\hline
+frog & snake,toad,monkey,spider,lizard,spiny,orchid,rattlesnake,snakes,salamanders \\
+\hline
+\end{tabular}
+\end{table} 
+\par 用户查询词与图文二元组关键词序列相关度计算方法主要思想是将两部分词序列基于word2vex语义相关度做一个映射，如图3-7所示，首先对于用户查询词序列中的每一个词，分别计算其与图文二元组关键词序列中每一个词中的语义相关度，那么语义相关度最大对应的词就是其在图文二元组词序列中的映射词，如图3-7中红色线条所示；同理对视频图文二元组中词序列做同样的操作，得到它们在用户查询词序列中的映射，如图3-7绿色线条所示。将两部分映射词语义相关度的值累加除以总词数就是两个词序列之前的语义相关度。算法2给出了计算用户查询词与图文二元组关键词序列的具体算法流程。
+\begin{figure}[htb]
+    \centerline{\includegraphics[width=6in]{figures/39.eps}}
+    \ncaption{用户查询词与视频关键词序列相关度计算}        
+\end{figure}
+\begin{algorithm}
+  \centering
+  \caption{文本相关度衡量算法}  
+  \label{alg:Framwork}  
+  \begin{algorithmic}[htbp]  
+    \Require  
+		 用户查询词序列，视频关键词序列序列
+    \Ensure  
+         文本相关度  
+    \Function {$Compute\underline{\hspace{0.5em}} Text\underline{\hspace{0.5em}} Relation$}{String[] text1,String[] text2}
+    \State double sum=0;
+    \For{$s1\ in\ text1[]$}
+    	\State double max=0;
+    	\For{$s2\ in\ text2[]$}
+    		\State double score=Word2VexScore(s1,s2);
+    		\If{$score > max$}
+    			\State $max \gets score$
+    		\EndIf
+    	\EndFor
+    	\State $sum \gets sum+max$
+    \EndFor
+    
+    \For{$s1\ in\ text2[]$}
+    	\State double max=0;
+    	\For{$s2\ in\ text1[]$}
+    		\State double score=Word2VexScore(s1,s2);
+    		\If{$score > max$}
+    			\State $max \gets score$
+    		\EndIf
+    	\EndFor
+    	\State $sum \gets sum+max$
+    \EndFor
+   	\State $result \gets \frac{sum}{(text1.length+text2.lengtg)}$
+   	\State \Return result
+	\EndFunction
+  \end{algorithmic}  
+\end{algorithm} 
+\subsection{视频缩略图图文内容布局方法}
+\par 上文基于图文内容质量，代表性，与用户查询词的语义相关性，从视频图文内容中选出了最合适的图文二元组作为缩略图的候选图文内容，本节介绍缩略图图文二元组布局方法，将这些候选图文内容合理的组织，从而生成美观的缩略图。
+\par 在生成缩略图之前，本文首先采用Song\upcite{key3}等人的方法检测候选图像显著性区域，该方法将图像的空间布局结构特征化为图像边界，并且结合多个底层线索优化图像边界，从而得到圆润的显著性灰度图，接着确定一个自适应阈值将图像二值化，最后通过检测轮廓得到图像显著性区域，本文选择面积最大的轮廓作为图像显著性区域。
 \subsection{实验结果及评估}
 
 \subsection{本章小结}

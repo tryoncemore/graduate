@@ -58,6 +58,7 @@ public class ClusterService {
 		set.add("Khan");
 		set.add("concepts");
 		set.add("Computer Science");
+		set.add("Etymology");
 		word2vex=new HashMap<String,double[]>(450000);
 		List<String> w2v=null;
 

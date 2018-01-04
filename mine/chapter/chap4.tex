@@ -12,7 +12,7 @@
     \centerline{\includegraphics[width=5in]{figures/22.eps}}
     \ncaption{视频检索结果可视化模型}        
 \end{figure}
-\par 用户输入的查询词概念通常比较宽泛，有很多方面\upcite{key61},有的查询词包含的非常复杂的结构。例如以“deep learning”搜索视频时，搜索引擎通常返回关于深度学习的发展历程，各种神经网络，人工智能或者深度学习教程等相关视频；又如以“Steven Spielberg”搜索视频时，搜索引擎通常会返回关于Steven Spielberg的电影，采访，成就，个人生活等等相关视频。这种情况下，传统的以一个视频列表包含着不同方面主题视频作为搜索结果返回给用户的方式是低效的，用户会非常难以定位到自己感兴趣的视频。因此，VideoVis系统在得到搜索结果后，先基于视频内容对视频搜索结果进行聚类分析，挖掘用户查询词语义相关话题各个方面的子话题，每个子话题对应于图4-1的各个标签，然后将视频检索结果根据视频内容映射到搜索词的各个方面，最后将层次化视频检索结果可视化呈现给用户。呈现方式采用FoamTree\footnote{https://carrotsearch.com/foamtree/}的方式，如图4-1所示，FoamTree生动、形象，是一个基于JavaScript的用于展示层次化数据的可视化模型。这种可视化方式细化了用户查询意图，起到了类似目录的作用，大大提高了用户检索视频的效率。当用户点击每个标签时，右边的视频缩略图列表会相应的刷新。图4-1右边的部分用来展示每个标签下对应的具体视频，展示的方式是用本文第三章为视频生成的与用户查询自适应的视频缩略图,它很好的展示了各个视频中用户感兴趣的内容，指导用户是否继续点击以观看视频。
+\par 用户输入的查询词概念通常比较宽泛，有很多方面\upcite{key61},有的查询词包含的非常复杂的结构。例如以“computer science”搜索视频时，搜索引擎通常返回关于计算机科学的方方面面的视频，如算法和数据结构、计算机系统架构、编程语言理论、人工智能等相关视频；又如以“Steven Spielberg”搜索视频时，搜索引擎通常会返回关于Steven Spielberg的电影，采访，成就，个人生活等等相关视频。这种情况下，传统的以一个视频列表包含着不同方面主题视频作为搜索结果返回给用户的方式是低效的，用户会非常难以定位到自己感兴趣的视频。因此，VideoVis系统在得到搜索结果后，先基于视频内容对视频搜索结果进行聚类分析，挖掘用户查询词语义相关话题各个方面的子话题，每个子话题对应于图4-1的各个标签，然后将视频检索结果根据视频内容映射到搜索词的各个方面，最后将层次化视频检索结果可视化呈现给用户。呈现方式采用FoamTree\footnote{https://carrotsearch.com/foamtree/}的方式，如图4-1所示，FoamTree生动、形象，是一个基于JavaScript的用于展示层次化数据的可视化模型。这种可视化方式细化了用户查询意图，起到了类似目录的作用，大大提高了用户检索视频的效率。当用户点击每个标签时，右边的视频缩略图列表会相应的刷新。图4-1右边的部分用来展示每个标签下对应的具体视频，展示的方式是用本文第三章为视频生成的与用户查询自适应的视频缩略图,它很好的展示了各个视频中用户感兴趣的内容，指导用户是否继续点击以观看视频。
 \subsubsection{视频内容可视化模块设计}
 \par 当用户点击图4-1中右边部分的视频缩略图时，VideoVis系统便会进入视频内容可视化模块，此模块用来展示视频双通道信息，以便用户快速定位到自己感兴趣的片段并快速读懂理解相关视频内容。
 \begin{figure}[htb]
@@ -28,10 +28,46 @@
 \end{figure}
 \par VideoVis系统搜索引擎架构如图4-4所示，引擎分为3个模块，第一个模块为离线处理模块，对视频进行OCR识别和语音识别得到文本信息，接着精炼这些文本信息，提取关键词序列。第二个模块是系统的后台，首先对各个视频提取关键词进行全文索引，接着将索引放在服务器目录下，等待用户访问。本文采用高性能文本搜索引擎Lucene\footnote{https://lucene.apache.org/},lucene是Apache基金会旗下一款开源的文本搜索引擎，具有性能高，接口简单等优点。当用户通过浏览器搜索视频时，服务器即通过Lucene索引匹配用户查询词找出相关视频返回给用户。第3个模块为系统客户端浏览器，图4-1展示了系统和用户交互的web页面。
 \begin{figure}[htb]
-    \centerline{\includegraphics[width=5in]{figures/25.eps}}
+    \centerline{\includegraphics[width=6in]{figures/25.eps}}
     \ncaption{VideoVis系统搜索引擎架构图}        
 \end{figure}
-\par 
+\par VideoVis系统在得到搜索引擎结果后不直接向用户展示视频结果列表，而是将结果视频进行聚类分析，将视频聚成一簇簇内容相近的类簇，聚类流程图如图4-5所示。本文聚类方法主要参考了Jiang\upcite{key61}等人的方法，首先挖掘用户输入的搜索词的语义层次结构，希望这个语义结构能概括用户搜索词的方方面面，维基百科\footnote{https://en.wikipedia.org/wiki/Wiki}很好的满足这一需求。维基百科是一个庞大的众包语料库，本文首先下载维基离线语料库\footnote{下载地址：https://dumps.wikimedia.org/}，对其中每个词条及其语义层次结构结点内容建立Lucene索引，便于快速查阅。当用户输入查询词搜索时，分别检索维基百科索引和视频内容索引得到查询词语义层次结构和视频搜索结果，紧接着，本文参照Jiang\upcite{key63}等人的方法并结合系统实际的需求将视频映射到维基语义结点上，映射过程中主要考虑视频与结点的相关性、视频从属结点的唯一性、结点中视频的多样性，它们的计算方式如公式4.1,4.2,4.3所示：
+\begin{equation}\label{1}
+	Rel(v,n)=Sim(v,n)
+\end{equation} 
+\begin{equation}\label{1}
+	Uniq(v,n_i)=\frac{Sim(v,n_i)}{\sum_{j=1}^{N}Sim(v,n_j)}
+\end{equation}
+\begin{equation}\label{1}
+	Div(v,n_i)=max_{v_j\epsilon V}(Sim(v,v_j))
+\end{equation}
+\begin{figure}[htb]
+    \centerline{\includegraphics[width=7in]{figures/26.eps}}
+    \ncaption{视频内容聚类流程图}        
+\end{figure}
+\par 公式4.1给出了视频v与结点n相关度的计算方法，$Sim(v,n)$表示视频v关键词序列与结点n文字内容基于word2vex的语义相关度，具体算法与算法3-2一致；公式4.2给出了视频v结点$n_i$的唯一性计算方法，显然相较于一个视频只属于多个结点，一个视频只属于一个唯一的结点的效果更好，其中N为结点总个数,视频v与结点$n_i$的唯一性定义为v与$n_i$语义相关度除以视频v与所有结点的语义相关度之和；公式4.3给出了结点$n_i$多样性的计算方法，其中V是结点结点$n_j$中已有的视频集合，$Sim(v,v_j)$表示视频v与视频$v_j$的语义相关度，用当前视频v与结点中视频语义相关度最大值作为视频v与结点$n_i$的多样性，考虑多样性主要是为了去除结点内内容特别相近的视频。基于相关性，唯一性，多样性定义目标函数F计算方法如公式4.4所示：
+\begin{equation}\label{1}
+	F=max_{v_i\epsilon V,n_j\epsilon N}{\sum_{i}\sum_{j}\beta*Rel(v_i,n_j)*Uniq(v_i,n_j)-(1-\beta)Div(v_i,n_j)}
+\end{equation}
+目标函数F是一个全局优化优化函数，使得视频与结点的映射结果在相关性、唯一性、多样性上做到全局上做到最优，尽管可以用穷举的方式得到全局最优解，但考虑到计算效率，本文采用一种贪婪的方式，即添加一个视频到结点中就使得F局部最优，进而得到最终的相对较优的可行解。其中$\beta$是调节相关性、唯一性、多样性的参数，本文使用交叉实验来确定$\beta$的具体值，如图4-6所示，本文选取20个用户搜索最为频繁的检索词，$\beta$从0到1以步长0.1取值，分别计算每个查询词结果视频集每个类别下视频与结点的相关度，进行交叉实验。基于图4-6所示交叉实验的结果，本文$\beta$取0.7。
+\begin{figure}[htb]
+    \centerline{\includegraphics[width=5in]{figures/27.eps}}
+    \ncaption{$\beta$参数交叉实验折线图}        
+\end{figure}
+\par 然而并不能保证维基词条包含用户每个查询词，而且即使包含用户查询词也不能保证其语义层次结构能覆盖查询词的方方面面，因此，作为对维基词条语义结构的补充，本文在维基词条语义结构的基础上挖掘用户查询词更全的语义结构。当维基词条没有收录用户查询词或者当视频内容与维基词条语义结构相关度不高时，本文使用carrot2\footnote{http://project.carrot2.org/}开源框架对视频搜索结果进行聚类分析，carrot2框架能实时对文档集基于语义聚类，并且为每个类别生成一个具有概括性且用户可读的文本标签，其原理基于Osinski\upcite{key63}等人提出的lingo算法。lingo算法首先介于SVD分解挖掘文档背后的抽象概念，接着这些抽象概念构造用户可读的类标签，最后将文档分配到这些类标签中。图4-7展示了VideoVis系统一些基于不同搜索词得到的结果视频的聚类分析结果。
+\begin{figure}[htb]
+    \centering
+    \subfigure[music]{\includegraphics[width=1.5in,height=2.5in]{figures/29.eps}}
+    \subfigure[art]{\includegraphics[width=1.5in,height=2.5in]{figures/30.eps}}
+    \subfigure[economy]{\includegraphics[width=1.5in,height=2.5in]{figures/31.eps}}
+    \subfigure[science]{\includegraphics[width=1.5in,height=2.5in]{figures/32.eps}}
+    \subfigure[China]{\includegraphics[width=1.5in,height=2.5in]{figures/33.eps}}
+    \subfigure[deep$\ $learning]{\includegraphics[width=1.5in,height=2.5in]{figures/34.eps}}
+	\subfigure[artificial intelligence]{\includegraphics[width=1.5in,height=2.5in]{figures/35.eps}}
+	\subfigure[university]{\includegraphics[width=1.5in,height=2.5in]{figures/36.eps}}
+	\subfigure[entertainment]{\includegraphics[width=1.5in,height=2.5in]{figures/37.eps}}
+    \ncaption{视频聚类分析结果}
+\end{figure}
 \subsection{视频可视化浏览系统实验评估}
 \subsubsection{视频检索可视化模块实验评估}
 \subsubsection{视频内容可视化模块实验评估}
